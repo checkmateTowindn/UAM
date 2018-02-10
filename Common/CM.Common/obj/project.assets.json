@@ -6150,11 +6150,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj",
+      "projectUniqueName": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj",
       "projectName": "CM.Common",
-      "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj",
+      "projectPath": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\obj\\",
+      "outputPath": "E:\\项目\\UAM\\Common\\CM.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

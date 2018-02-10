@@ -1,0 +1,14 @@
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.deps.json
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.runtimeconfig.json
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.runtimeconfig.dev.json
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.pdb
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.csprojResolveAssemblyReference.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.csproj.CoreCompileInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.AssemblyInfoInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.AssemblyInfo.cs
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\UnitTestProject\Debug\netcoreapp2.0\UnitTestProject.pdb

@@ -43,7 +43,7 @@ namespace CM.UM.Service
                 }
                 Dictionary<string, object> dic = new Dictionary<string, object>();
                 StringBuilder sql = new StringBuilder();
-                sql.Append(@" INSERT INTO UC_User(Id,UserName,LoginName,PassWord,IsValid,Status,Mobile,CreateUser,CreateTime,UserExtendId) VALUES (:Id,:UserName,:LoginName,:PassWord,:IsValid,:Status,:Mobile,:CreateUser,:CreateTime,:UserExtendId)");
+                sql.Append(@" INSERT INTO UC_User(Id,UserName,LoginName,PassWord,IsValid,Status,Mobile,CreateUser,CreateTime,UserExtendId) VALUES (?Id,?UserName,?LoginName,?PassWord,?IsValid,?Status,?Mobile,?CreateUser,?CreateTime,?UserExtendId)");
                 dic.Add("Id", NewData.NewId("YH"));
                 dic.Add("UserName", model.UserName);
                 dic.Add("LoginName", model.LoginName);
@@ -57,7 +57,7 @@ namespace CM.UM.Service
                 int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
                 if (count == 1)
                 {
-                    result.Success = true;
+                    result = Verify(model);
                 }
                 else
                 {
@@ -100,7 +100,7 @@ namespace CM.UM.Service
                     {
                         if (i > 0)
                         {
-                            sql.AppendFormat(@" OR Id=:Id{0} ", i);
+                            sql.AppendFormat(@" OR Id=?Id{0} ", i);
                             if (i == ids.Count - 1)
                             {
                                 sql.Append(@" ) ");
@@ -108,12 +108,12 @@ namespace CM.UM.Service
                         }
                         else
                         {
-                            sql.AppendFormat(@" AND ( Id=:Id{0} ", i);
+                            sql.AppendFormat(@" AND ( Id=?Id{0} ", i);
                         }
                     }
                     else
                     {
-                        sql.AppendFormat(@" AND Id=:Id{0} ", i);
+                        sql.AppendFormat(@" AND Id=?Id{0} ", i);
                     }
                     dic.Add("Id" + i, ids[i]);
                 }
@@ -151,32 +151,32 @@ namespace CM.UM.Service
                 sql.Append(@"UPDATE UC_User SET ");
                 if (model.UserName != null)
                 {
-                    sql.Append(@" UserName=:UserName,");
+                    sql.Append(@" UserName=?UserName,");
                     dic.Add("UserName",model.UserName);
                 }
                 if (model.PassWord != null)
                 {
-                    sql.Append(@" PassWord=:PassWord,");
+                    sql.Append(@" PassWord=?PassWord,");
                     dic.Add("PassWord",Com.SHA512Encrypt(model.PassWord));
                 }
                 if (model.IsValid != null)
                 {
-                    sql.Append(@" IsValid=:IsValid,");
+                    sql.Append(@" IsValid=?IsValid,");
                     dic.Add("IsValid", model.IsValid);
                 }
                 if (model.Status != null)
                 {
-                    sql.Append(@" Status=:Status,");
+                    sql.Append(@" Status=?Status,");
                     dic.Add("Status", model.Status);
                 }
                 if (model.Mobile != null)
                 {
-                    sql.Append(@" Mobile=:Mobile,");
+                    sql.Append(@" Mobile=?Mobile,");
                     dic.Add("Mobile", model.Mobile);
                 }
                 if (model.Email != null)
                 {
-                    sql.Append(@" Email=:Email,");
+                    sql.Append(@" Email=?Email,");
                     dic.Add("Email", model.Email);
                 }
                 //去掉最后一个逗号
@@ -189,7 +189,7 @@ namespace CM.UM.Service
                     {
                         if (i > 0)
                         {
-                            sql.AppendFormat(@" OR Id=:Id{0} ", i);
+                            sql.AppendFormat(@" OR Id=?Id{0} ", i);
                             if (i == ids.Count - 1)
                             {
                                 sql.Append(@" ) ");
@@ -197,12 +197,12 @@ namespace CM.UM.Service
                         }
                         else
                         {
-                            sql.AppendFormat(@" AND ( Id=:Id{0} ", i);
+                            sql.AppendFormat(@" AND ( Id=?Id{0} ", i);
                         }
                     }
                     else
                     {
-                        sql.AppendFormat(@" AND Id=:Id{0} ", i);
+                        sql.AppendFormat(@" AND Id=?Id{0} ", i);
                     }
                     dic.Add("Id"+i,ids[i]);
                 }
@@ -241,43 +241,43 @@ namespace CM.UM.Service
                 sublistSql.Append(@" SELECT * FROM UC_User WHERE 1=1 ");
                 if (model.Id != null)
                 {
-                    sublistSql.Append(@" AND Id=:Id ");
+                    sublistSql.Append(@" AND Id=?Id ");
                     dic.Add("Id", model.Id);
                 }
                 if (model.UserName != null)
                 {
-                    sublistSql.Append(@" AND UserName LIKE :UserName ");
+                    sublistSql.Append(@" AND UserName LIKE ?UserName ");
                     dic.Add("UserName", "%"+model.UserName + "%");
                 }
                 if (model.LoginName != null)
                 {
-                    sublistSql.Append(@" AND LoginName LIKE :LoginName ");
+                    sublistSql.Append(@" AND LoginName LIKE ?LoginName ");
                     dic.Add("LoginName", "%" + model.LoginName + "%");
                 }
                 if (model.IsValid != null)
                 {
-                    sublistSql.Append(@" AND IsValid=:IsValid ");
+                    sublistSql.Append(@" AND IsValid=?IsValid ");
                 }
                 if (model.Status != null)
                 {
-                    sublistSql.Append(@" AND Status=:Status ");
+                    sublistSql.Append(@" AND Status=?Status ");
                 }
                 if (model.Mobile != null)
                 {
-                    sublistSql.Append(@" AND Mobile LIKE :Mobile ");
+                    sublistSql.Append(@" AND Mobile LIKE ?Mobile ");
                     dic.Add("Mobile", "%" + model.Mobile + "%");
                 }
                 if (model.CreateUser != null)
                 {
-                    sublistSql.Append(@" AND CreateUser=:CreateUser ");
+                    sublistSql.Append(@" AND CreateUser=?CreateUser ");
                 }
                 if (model.CreateTime != null)
                 {
-                    sublistSql.Append(@" AND IsValid=:IsValid ");
+                    sublistSql.Append(@" AND IsValid=?IsValid ");
                 }
                 if (model.Email != null)
                 {
-                    sublistSql.Append(@" AND Email LIKE :Email ");
+                    sublistSql.Append(@" AND Email LIKE ?Email ");
                     dic.Add("Email", "%" + model.Email + "%");
                 }
                 RecordAsPageModel page = new RecordAsPageModel();
@@ -285,7 +285,7 @@ namespace CM.UM.Service
                 page.OrderType= Convert.ToInt16(orderType);
                 page.PageIndex = pageIndex;
                 page.SortName = orderColumnName;
-                IList<UC_User> list = (MySqlHelper.GetRecordAsPage<UC_User>(page));
+                IList<UC_User> list = (MySqlHelper.ExecuteReader<UC_User>(sublistSql.ToString(),dic));
             }
             catch (Exception e)
             {
@@ -315,23 +315,23 @@ namespace CM.UM.Service
                 sql.Append(@" select * from UC_User WHERE 1=1 ");
                 if (!string.IsNullOrWhiteSpace(model.LoginName))
                 {
-                    sql.Append(@" AND LoginName=:LoginName");
+                    sql.Append(@" AND LoginName=?LoginName");
                     dic.Add("LoginName", model.LoginName);
                 }
                 if (!string.IsNullOrWhiteSpace(model.Mobile))
                 {
-                    sql.Append(@" AND Mobile=:Mobile");
+                    sql.Append(@" AND Mobile=?Mobile");
                     dic.Add("Mobile", model.Mobile);
                 }
                 if (!string.IsNullOrWhiteSpace(model.Email))
                 {
-                    sql.Append(@" AND Email=:Email");
+                    sql.Append(@" AND Email=?Email");
                     dic.Add("Email", model.Email);
                 }
-                sql.Append(@" AND PassWord=:PassWord ");
+                sql.Append(@" AND PassWord=?PassWord ");
                 dic.Add("PassWord", Com.SHA512Encrypt(model.PassWord));
-                List<UC_User> data = null;
-                //List<UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), dic);
+               // List<UC_User> data = null;
+                List<UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), dic);
                 if (data != null)
                 {
                     if (data.Count > 0)
@@ -372,21 +372,21 @@ namespace CM.UM.Service
                 sql.Append(@" select * from UC_User WHERE 1=1 ");
                 if (loginName != null)
                 {
-                    sql.Append(@" AND LoginName=:LoginName ");
+                    sql.Append(@" AND LoginName=?LoginName ");
                     dic.Add("LoginName", loginName);
                 }
                 if (mobile != null)
                 {
-                    sql.Append(@" AND Mobile=:Mobile ");
+                    sql.Append(@" AND Mobile=?Mobile ");
                     dic.Add("Mobile", mobile);
                 }
                 if (email != null)
                 {
-                    sql.Append(@" AND Email=:Email ");
+                    sql.Append(@" AND Email=?Email ");
                     dic.Add("Email", email);
                 }
-                List<UC_User> data = null;
-               //List <UC_User> data = MySqlHelper.ExecuteDataReader<UC_User>(sql.ToString(), dic);
+               // List<UC_User> data = null;
+                List <UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), dic);
                 
                 if (data!=null)
                 {

@@ -1,0 +1,4 @@
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UAM.WebAPI\Debug\netcoreapp2.0\CM.UAM.WebAPI.csprojResolveAssemblyReference.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UAM.WebAPI\Debug\netcoreapp2.0\CM.UAM.WebAPI.csproj.CoreCompileInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UAM.WebAPI\Debug\netcoreapp2.0\CM.UAM.WebAPI.AssemblyInfoInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UAM.WebAPI\Debug\netcoreapp2.0\CM.UAM.WebAPI.AssemblyInfo.cs

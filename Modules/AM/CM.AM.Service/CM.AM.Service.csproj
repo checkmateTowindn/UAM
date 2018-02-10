@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CM.AM.IService\CM.AM.IService.csproj" />
+  </ItemGroup>
+
 </Project>

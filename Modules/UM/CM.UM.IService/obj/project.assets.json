@@ -6124,11 +6124,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj",
+      "projectUniqueName": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj",
       "projectName": "CM.UM.IService",
-      "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj",
+      "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.IService\\obj\\",
+      "outputPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6147,11 +6147,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj": {
-              "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj"
+            "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj"
             },
-            "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj": {
-              "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj"
+            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj"
             }
           }
         }

@@ -19,6 +19,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\CM.Common\CM.Common.csproj" />
+    <ProjectReference Include="..\..\Modules\AM\CM.AM.IService\CM.AM.IService.csproj" />
+    <ProjectReference Include="..\..\Modules\AM\CM.AM.Service\CM.AM.Service.csproj" />
+    <ProjectReference Include="..\..\Modules\UM\CM.UM.IService\CM.UM.IService.csproj" />
+    <ProjectReference Include="..\..\Modules\UM\CM.UM.Service\CM.UM.Service.csproj" />
   </ItemGroup>
 
 </Project>

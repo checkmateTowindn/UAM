@@ -16,3 +16,12 @@ E:\项目\CM_UAM\CM_UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.Assem
 E:\项目\CM_UAM\CM_UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
 E:\项目\CM_UAM\CM_UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
 E:\项目\CM_UAM\CM_UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.deps.json
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.dll
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.pdb
+E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
+E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csproj.CoreCompileInputs.cache
+E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfoInputs.cache
+E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
+E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
+E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb

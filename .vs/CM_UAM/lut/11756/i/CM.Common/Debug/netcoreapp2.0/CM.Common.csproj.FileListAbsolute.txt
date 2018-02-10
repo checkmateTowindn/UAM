@@ -1,0 +1,8 @@
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\CM.Common\Debug\netcoreapp2.0\CM.Common.deps.json
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\CM.Common\Debug\netcoreapp2.0\CM.Common.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\CM.Common\Debug\netcoreapp2.0\CM.Common.pdb
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.Common\Debug\netcoreapp2.0\CM.Common.csproj.CoreCompileInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.Common\Debug\netcoreapp2.0\CM.Common.AssemblyInfoInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.Common\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.Common\Debug\netcoreapp2.0\CM.Common.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.Common\Debug\netcoreapp2.0\CM.Common.pdb

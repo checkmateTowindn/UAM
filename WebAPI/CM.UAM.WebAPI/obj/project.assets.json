@@ -5116,6 +5116,43 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "CM.AM.IService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.AM.Model": "1.0.0",
+          "CM.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CM.AM.IService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.AM.IService.dll": {}
+        }
+      },
+      "CM.AM.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CM.AM.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.AM.Model.dll": {}
+        }
+      },
+      "CM.AM.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.AM.IService": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CM.AM.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.AM.Service.dll": {}
+        }
+      },
       "CM.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -5130,6 +5167,45 @@
         },
         "runtime": {
           "bin/placeholder/CM.Common.dll": {}
+        }
+      },
+      "CM.UM.IService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.Common": "1.0.0",
+          "CM.UM.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CM.UM.IService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.UM.IService.dll": {}
+        }
+      },
+      "CM.UM.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CM.UM.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.UM.Model.dll": {}
+        }
+      },
+      "CM.UM.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.Common": "1.0.0",
+          "CM.UM.IService": "1.0.0",
+          "CM.UM.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CM.UM.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.UM.Service.dll": {}
         }
       }
     }
@@ -13401,15 +13477,49 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "CM.AM.IService/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/AM/CM.AM.IService/CM.AM.IService.csproj",
+      "msbuildProject": "../../Modules/AM/CM.AM.IService/CM.AM.IService.csproj"
+    },
+    "CM.AM.Model/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/AM/CM.AM.Model/CM.AM.Model.csproj",
+      "msbuildProject": "../../Modules/AM/CM.AM.Model/CM.AM.Model.csproj"
+    },
+    "CM.AM.Service/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/AM/CM.AM.Service/CM.AM.Service.csproj",
+      "msbuildProject": "../../Modules/AM/CM.AM.Service/CM.AM.Service.csproj"
+    },
     "CM.Common/1.0.0": {
       "type": "project",
       "path": "../../Common/CM.Common/CM.Common.csproj",
       "msbuildProject": "../../Common/CM.Common/CM.Common.csproj"
+    },
+    "CM.UM.IService/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/UM/CM.UM.IService/CM.UM.IService.csproj",
+      "msbuildProject": "../../Modules/UM/CM.UM.IService/CM.UM.IService.csproj"
+    },
+    "CM.UM.Model/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/UM/CM.UM.Model/CM.UM.Model.csproj",
+      "msbuildProject": "../../Modules/UM/CM.UM.Model/CM.UM.Model.csproj"
+    },
+    "CM.UM.Service/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/UM/CM.UM.Service/CM.UM.Service.csproj",
+      "msbuildProject": "../../Modules/UM/CM.UM.Service/CM.UM.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "CM.AM.IService >= 1.0.0",
+      "CM.AM.Service >= 1.0.0",
       "CM.Common >= 1.0.0",
+      "CM.UM.IService >= 1.0.0",
+      "CM.UM.Service >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0"
@@ -13425,11 +13535,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\CM_UAM\\CM_UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
+      "projectUniqueName": "E:\\项目\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
       "projectName": "CM.UAM.WebAPI",
-      "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
+      "projectPath": "E:\\项目\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\CM_UAM\\CM_UAM\\WebAPI\\CM.UAM.WebAPI\\obj\\",
+      "outputPath": "E:\\项目\\UAM\\WebAPI\\CM.UAM.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13448,8 +13558,20 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj": {
-              "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj"
+            "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj"
+            },
+            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
+            },
+            "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj"
+            },
+            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
+            },
+            "E:\\项目\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
             }
           }
         }

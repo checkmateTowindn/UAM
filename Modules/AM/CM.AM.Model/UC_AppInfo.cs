@@ -10,7 +10,7 @@ namespace CM.AM.Model
         public string Token { get; set; }
         public string Description { get; set; }
         public string AddressURL { get; set; }
-        public int Status { get; set; }
+        public int? Status { get; set; }
         public string CreateUser { get; set; }
         public DateTime CreateTime { get; set; }
     }

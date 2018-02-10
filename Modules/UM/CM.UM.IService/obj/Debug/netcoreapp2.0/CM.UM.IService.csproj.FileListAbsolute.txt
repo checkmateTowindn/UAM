@@ -24,3 +24,16 @@ E:\项目\CM_UAM\CM_UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.
 E:\项目\CM_UAM\CM_UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfo.cs
 E:\项目\CM_UAM\CM_UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.dll
 E:\项目\CM_UAM\CM_UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.pdb
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.IService.deps.json
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.IService.dll
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.IService.pdb
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.Common.dll
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.Model.dll
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.Common.pdb
+E:\项目\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.Model.pdb
+E:\项目\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.csprojResolveAssemblyReference.cache
+E:\项目\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.csproj.CoreCompileInputs.cache
+E:\项目\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfoInputs.cache
+E:\项目\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfo.cs
+E:\项目\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.dll
+E:\项目\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.pdb

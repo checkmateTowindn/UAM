@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A4998BA3-CF36-4281-BA03-46FA2EFADD8B}"
 EndProject
@@ -30,7 +30,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.Common", "Common\CM.Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.UM.IService", "Modules\UM\CM.UM.IService\CM.UM.IService.csproj", "{72917C82-88B0-4D53-BD52-61664B60B2C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "Modules\UnitTestProject\UnitTestProject.csproj", "{975EBCF6-9A21-431E-A28E-1F186D8BB49E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "Modules\UnitTestProject\UnitTestProject.csproj", "{975EBCF6-9A21-431E-A28E-1F186D8BB49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM.AM.IService", "Modules\AM\CM.AM.IService\CM.AM.IService.csproj", "{6295904D-EF78-4B1A-A8FE-4E4B6C613E32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +72,10 @@ Global
 		{975EBCF6-9A21-431E-A28E-1F186D8BB49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975EBCF6-9A21-431E-A28E-1F186D8BB49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{975EBCF6-9A21-431E-A28E-1F186D8BB49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6295904D-EF78-4B1A-A8FE-4E4B6C613E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6295904D-EF78-4B1A-A8FE-4E4B6C613E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6295904D-EF78-4B1A-A8FE-4E4B6C613E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6295904D-EF78-4B1A-A8FE-4E4B6C613E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{92941031-8F21-47CF-8014-AFB666EC9183} = {A4998BA3-CF36-4281-BA03-46FA2EFADD8B}
 		{72917C82-88B0-4D53-BD52-61664B60B2C6} = {27463F3C-A4B2-48A8-A6D2-7E3E959A3264}
 		{975EBCF6-9A21-431E-A28E-1F186D8BB49E} = {4BB378AA-AE89-4EBB-BA84-BBCB0AB06480}
+		{6295904D-EF78-4B1A-A8FE-4E4B6C613E32} = {DA91980C-E5BE-42B9-954B-7D091A43E544}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B867762F-F9B5-4F55-8BAF-AF3011204702}

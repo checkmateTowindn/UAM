@@ -6144,11 +6144,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
+      "projectUniqueName": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
       "projectName": "CM.UM.Service",
-      "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
+      "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Service\\obj\\",
+      "outputPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6167,14 +6167,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
-              "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
+            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
             },
-            "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj": {
-              "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Common\\CM.Common\\CM.Common.csproj"
+            "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj"
             },
-            "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj": {
-              "projectPath": "E:\\项目\\CM_UAM\\CM_UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj"
+            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj": {
+              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj"
             }
           }
         }

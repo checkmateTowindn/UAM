@@ -1,0 +1,9 @@
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.deps.json
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\b\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.pdb
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.csprojResolveAssemblyReference.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.csproj.CoreCompileInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfoInputs.cache
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfo.cs
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.dll
+E:\项目\UAM\.vs\CM_UAM\lut\0\i\CM.UM.IService\Debug\netcoreapp2.0\CM.UM.IService.pdb
