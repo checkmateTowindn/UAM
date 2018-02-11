@@ -29,10 +29,10 @@ namespace CM.UAM.WebAPI
             {
                 options.AddPolicy("any", builder =>
                 {
-                    builder.AllowAnyOrigin() //允许任何来源的主机访问
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();//指定处理cookie
+                    builder.AllowAnyOrigin(); //允许任何来源的主机访问
+                    builder.AllowAnyHeader();
+                    builder.AllowAnyMethod();
+                    builder.AllowCredentials();//指定处理cookie
                 });
             });
         }

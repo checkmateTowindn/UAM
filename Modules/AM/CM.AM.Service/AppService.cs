@@ -122,7 +122,6 @@ namespace CM.AM.Service
             }
             return result;
         }
-        #region 验证
         /// <summary>
         /// 验证
         /// </summary>

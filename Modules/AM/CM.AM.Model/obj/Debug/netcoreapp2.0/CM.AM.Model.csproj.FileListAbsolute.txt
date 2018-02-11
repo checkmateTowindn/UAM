@@ -16,3 +16,12 @@ E:\项目\CM_UAM\CM_UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Mod
 E:\项目\CM_UAM\CM_UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.AssemblyInfo.cs
 E:\项目\CM_UAM\CM_UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.dll
 E:\项目\CM_UAM\CM_UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.pdb
+E:\项目\UAM\Modules\AM\CM.AM.Model\bin\Debug\netcoreapp2.0\CM.AM.Model.deps.json
+E:\项目\UAM\Modules\AM\CM.AM.Model\bin\Debug\netcoreapp2.0\CM.AM.Model.dll
+E:\项目\UAM\Modules\AM\CM.AM.Model\bin\Debug\netcoreapp2.0\CM.AM.Model.pdb
+E:\项目\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.csprojResolveAssemblyReference.cache
+E:\项目\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.csproj.CoreCompileInputs.cache
+E:\项目\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.AssemblyInfoInputs.cache
+E:\项目\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.AssemblyInfo.cs
+E:\项目\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.dll
+E:\项目\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.pdb

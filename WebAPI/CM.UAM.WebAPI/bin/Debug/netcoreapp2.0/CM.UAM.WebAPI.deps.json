@@ -23,10 +23,15 @@
     ".NETCoreApp,Version=v2.0": {
       "CM.UAM.WebAPI/1.0.0": {
         "dependencies": {
+          "CM.AM.IService": "1.0.0",
+          "CM.AM.Service": "1.0.0",
           "CM.Common": "1.0.0",
+          "CM.UM.IService": "1.0.0",
+          "CM.UM.Service": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0",
+          "YunpianInternationalSMSApi": "1.0.0.0"
         },
         "runtime": {
           "CM.UAM.WebAPI.dll": {}
@@ -4128,6 +4133,37 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "CM.AM.IService/1.0.0": {
+        "dependencies": {
+          "CM.AM.Model": "1.0.0",
+          "CM.Common": "1.0.0"
+        },
+        "runtime": {
+          "CM.AM.IService.dll": {}
+        },
+        "compile": {
+          "CM.AM.IService.dll": {}
+        }
+      },
+      "CM.AM.Model/1.0.0": {
+        "runtime": {
+          "CM.AM.Model.dll": {}
+        },
+        "compile": {
+          "CM.AM.Model.dll": {}
+        }
+      },
+      "CM.AM.Service/1.0.0": {
+        "dependencies": {
+          "CM.AM.IService": "1.0.0"
+        },
+        "runtime": {
+          "CM.AM.Service.dll": {}
+        },
+        "compile": {
+          "CM.AM.Service.dll": {}
+        }
+      },
       "CM.Common/1.0.0": {
         "dependencies": {
           "MySql.Data": "6.10.6",
@@ -4140,6 +4176,47 @@
         },
         "compile": {
           "CM.Common.dll": {}
+        }
+      },
+      "CM.UM.IService/1.0.0": {
+        "dependencies": {
+          "CM.Common": "1.0.0",
+          "CM.UM.Model": "1.0.0"
+        },
+        "runtime": {
+          "CM.UM.IService.dll": {}
+        },
+        "compile": {
+          "CM.UM.IService.dll": {}
+        }
+      },
+      "CM.UM.Model/1.0.0": {
+        "runtime": {
+          "CM.UM.Model.dll": {}
+        },
+        "compile": {
+          "CM.UM.Model.dll": {}
+        }
+      },
+      "CM.UM.Service/1.0.0": {
+        "dependencies": {
+          "CM.Common": "1.0.0",
+          "CM.UM.IService": "1.0.0",
+          "CM.UM.Model": "1.0.0"
+        },
+        "runtime": {
+          "CM.UM.Service.dll": {}
+        },
+        "compile": {
+          "CM.UM.Service.dll": {}
+        }
+      },
+      "YunpianInternationalSMSApi/1.0.0.0": {
+        "runtime": {
+          "YunpianInternationalSMSApi.dll": {}
+        },
+        "compile": {
+          "YunpianInternationalSMSApi.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -6496,8 +6573,43 @@
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
+    "CM.AM.IService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CM.AM.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CM.AM.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "CM.Common/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CM.UM.IService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CM.UM.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CM.UM.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YunpianInternationalSMSApi/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

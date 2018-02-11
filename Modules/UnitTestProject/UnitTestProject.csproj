@@ -18,4 +18,10 @@
     <ProjectReference Include="..\UM\CM.UM.Service\CM.UM.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="YunpianInternationalSMSApi">
+      <HintPath>..\..\Common\CM.Common\lib\YunpianInternationalSMSApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

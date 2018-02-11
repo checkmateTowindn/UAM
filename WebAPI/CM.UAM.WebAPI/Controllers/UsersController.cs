@@ -15,11 +15,15 @@ using CM.AM.Service;
 using CM.AM.Model;
 using Common;
 using Newtonsoft.Json;
+using YunpianInternationalSMSApi;
+using YunpianInternationalSMSApi.Models;
+using System.Runtime.Serialization.Json;
+using YunpianInternationalSMSApi.ReturnModel;
 
 namespace CM.UAM.WebAPI.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Users")]
+    [Route("api/[controller]/[action]")]
     [EnableCors("any")]
     public class UsersController : Controller
     {
@@ -46,7 +50,7 @@ namespace CM.UAM.WebAPI.Controllers
             return View();
         }
         [HttpPost]
-        public JsonResult Login(string URL, string Token,string LoginName, string PassWord)
+        public JsonResult Login(string URL, string Token, string LoginName, string PassWord)
         {
             result.Success = false;
             //判断token是否正确
@@ -82,7 +86,7 @@ namespace CM.UAM.WebAPI.Controllers
                 if (result.Success == true)
                 {
                     //缓存
-                    List<UC_User> list =(List<UC_User>)result.Source;
+                    List<UC_User> list = (List<UC_User>)result.Source;
                     string key = list[0].Id;
                     string jsonData = JsonConvert.SerializeObject(list[0]);
                     RedisHelper.StringSet(key, jsonData, new TimeSpan(1, 1, 1, 1, 1));
@@ -93,10 +97,10 @@ namespace CM.UAM.WebAPI.Controllers
             return Json(result);
         }
         [HttpPost]
-        public JsonResult Register(string URL, string Token,string LoginName = null, string Mobile = null, string Email = null, string PassWord = null, string PassWord2 = null)
+        public JsonResult Register(string URL, string Token, string LoginName = null, string Mobile = null, string Email = null, string PassWord = null, string PassWord2 = null)
         {
             result.Success = false;
-            if (string.IsNullOrWhiteSpace(URL)|| string.IsNullOrWhiteSpace(Token))
+            if (string.IsNullOrWhiteSpace(URL) || string.IsNullOrWhiteSpace(Token))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "注册来源不明！";
@@ -125,14 +129,43 @@ namespace CM.UAM.WebAPI.Controllers
                 if (result.Success == true)
                 {
                     //记入Redis   
-                    List<UC_User> list =(List<UC_User>)result.Source;
+                    List<UC_User> list = (List<UC_User>)result.Source;
                     string key = list[0].Id;
                     string jsonData = JsonConvert.SerializeObject(list[0]);
                     RedisHelper.StringSet(key, jsonData, new TimeSpan(1, 1, 1, 1, 1));
                     result.Source = URL;//返回此URL
                 }
             }
-           
+
+            return Json(result);
+        }
+        [HttpPost]
+        public JsonResult SendVerifyNumber([FromBody]string URL, [FromBody]string Token, [FromBody]string mobile)
+        {
+            result.Success = false;
+            if (string.IsNullOrWhiteSpace(URL) || string.IsNullOrWhiteSpace(Token))
+            {
+                result.State = AjaxMsgResult.StateEnum.VerifyFailed;
+                result.Msg = "注册来源不明！";
+                return Json(result);
+            }
+
+            SmsSingleSendModel sm = new SmsSingleSendModel();
+            Config config = new Config("");
+            sm.mobile = mobile;
+            sm.apikey = config.apikey;
+            Random rd = new Random();
+            int number= rd.Next(100000, 99999);
+            sm.text = "【问鼎科技】欢迎注册问鼎科技，您的验证码是" + number.ToString();
+            IYunpianInternationalSMS ys = new YunpianInternationalSMS();
+            string res= ys.SingleSendVerificationCode(sm).DataObj.ToString();
+            DataContractJsonSerializer deseralizer = new DataContractJsonSerializer(typeof(SmsSingleSendReturnModel));
+            SmsSingleSendReturnModel smsSingleSendReturnModel = JsonConvert.DeserializeObject<SmsSingleSendReturnModel>(res);//反序列化
+            if (smsSingleSendReturnModel.code == 0) {
+                result.Success = true;
+                result.Source = URL;//返回此URL
+                result.Msg = "发送成功！";
+            }
             return Json(result);
         }
         [HttpPost]

@@ -17,6 +17,7 @@ namespace CM.UM.Service
     public class UserService : IUserService
     {
         AjaxMsgResult result = new AjaxMsgResult();
+
         //IDataBase con = new PostgreSQL();
         #region 添加用户
         /// <summary>

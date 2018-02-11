@@ -25,3 +25,7 @@ E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfoInp
 E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
 E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
 E:\项目\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\EasyLib.Core.dll
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\NLog.dll
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Yunpian.dll
+E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll

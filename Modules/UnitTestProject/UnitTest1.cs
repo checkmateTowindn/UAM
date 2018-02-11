@@ -5,8 +5,13 @@ using CM.UM.Model;
 using CM.UM.Service;
 using Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Json;
+using YunpianInternationalSMSApi;
+using YunpianInternationalSMSApi.Models;
+using YunpianInternationalSMSApi.ReturnModel;
 
 namespace UnitTestProject
 {
@@ -50,6 +55,28 @@ namespace UnitTestProject
             result = con.Update(ids, model, model);
         }
         [TestMethod]
+        public void Sss()
+        {
+            SmsSingleSendModel sm = new SmsSingleSendModel();
+            Config config = new Config("ee4096858a640a3938261e8057a0d8b3");
+            sm.mobile = "18600522656";
+            sm.apikey = config.apikey;
+            Random rd = new Random();
+            int number = rd.Next(100000, 999999);
+            sm.text = "【问鼎科技】欢迎注册问鼎科技，您的验证码是" + number.ToString();
+            IYunpianInternationalSMS ys = new YunpianInternationalSMS();
+            string res = ys.SingleSendVerificationCode(sm).DataObj.ToString();
+            SmsSingleSendReturnModel descJsonStu = JsonConvert.DeserializeObject<SmsSingleSendReturnModel>(res);//反序列化
+        }
+        [TestMethod]
+        public void Aaa()
+        {
+            string a = "{\"code\":0,\"msg\":\"发送成功\",\"count\":1,\"fee\":0.05,\"unit\":\"RMB\",\"mobile\":\"18600522656\",\"sid\":21684538470}";
+            string jsonData = JsonConvert.SerializeObject(a);
+            SmsSingleSendReturnModel descJsonStu = JsonConvert.DeserializeObject<SmsSingleSendReturnModel>(a);
+        }
+
+        [TestMethod]
         public void Verify()
         {
             UC_User model = new UC_User();
@@ -67,5 +94,6 @@ namespace UnitTestProject
                 return "a1:" + a1 + ";a2:" + a2;
             }
         }
+       
     }
 }

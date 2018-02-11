@@ -11,4 +11,19 @@
     <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="EasyLib.Core">
+      <HintPath>lib\EasyLib.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>lib\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Yunpian">
+      <HintPath>lib\Yunpian.dll</HintPath>
+    </Reference>
+    <Reference Include="YunpianInternationalSMSApi">
+      <HintPath>lib\YunpianInternationalSMSApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
