@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Model\\CM.AM.Model.csproj",
+      "projectUniqueName": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Model\\CM.AM.Model.csproj",
       "projectName": "CM.AM.Model",
-      "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Model\\CM.AM.Model.csproj",
+      "projectPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Model\\CM.AM.Model.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Model\\obj\\",
+      "outputPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -2421,11 +2421,13 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
         "LICENSE.md",
+        "Newtonsoft.Json.10.0.3.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -2442,8 +2444,6 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.10.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
         "tools/install.ps1"
       ]
     },
@@ -6142,11 +6142,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj",
+      "projectUniqueName": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj",
       "projectName": "CM.AM.Service",
-      "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj",
+      "projectPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\obj\\",
+      "outputPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6165,8 +6165,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\项目\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
             }
           }
         }

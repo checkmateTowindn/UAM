@@ -1139,7 +1139,7 @@ namespace CM.Common.MySQL
         /// <typeparam name="T"></typeparam>
         /// <param name="sql"></param>
         /// <returns></returns>
-        public static List<T> ExecuteReader<T>(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
+        public static List<T> ExecuteReader2<T>(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
         {
             List<T> list = null;
 
@@ -1154,6 +1154,8 @@ namespace CM.Common.MySQL
             }
             MySqlConnection connection = MySQLConnection.GetMySqlConnection();
             var commond = MySQLConnection.GetMySqlCommand(connection, sql, parameters.ToArray(), commandType);
+
+     
 
             var reader = commond.ExecuteReader();
             if (reader.Read())
@@ -1193,6 +1195,67 @@ namespace CM.Common.MySQL
 
             return list;
         }
+
+
+
+
+        public static List<T> ExecuteReader<T>(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
+        {
+            List<T> list = null;
+
+            var fields = typeof(T).GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
+            List<MySqlParameter> parameters = new List<MySqlParameter>();
+            foreach (var item in dic)
+            {
+                object type = item.Value;
+                type = type == null ? DBNull.Value : type;
+                MySqlParameter parm = new MySqlParameter(item.Key, type);
+                parameters.Add(parm);
+            }
+            MySqlConnection connection = MySQLConnection.GetMySqlConnection();
+            var commond = MySQLConnection.GetMySqlCommand(connection, sql, parameters.ToArray(), commandType);
+
+            Type ts = Activator.CreateInstance<T>().GetType();
+            var obj = ts.GetProperties();
+
+            var reader = commond.ExecuteReader();
+            if (reader.Read())
+            {
+                Dictionary<string, int> Maps = null;
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    foreach (var item in obj)
+                    {
+                        if (item.Name.Equals(reader.GetName(i)))//名称相同
+                        {
+                            if (Maps == null) { Maps = new Dictionary<string, int>(); }
+                            Maps.Add(item.Name, i);
+                        }
+                    }
+                }
+                if (Maps != null)
+                {
+                    list = new List<T>();
+                    do
+                    {
+                        T t = new T();
+                        for (int i = 0; i < Maps.Count(); i++)
+                        {
+                            var val = reader.GetValue(i) == DBNull.Value ? null : reader.GetValue(i);
+                            obj[i].SetValue((object)t, val, null);
+                        }
+                        list.Add(t);
+                    } while (reader.Read());
+                }
+            }
+
+            reader.Close();
+            commond.Dispose();
+            MySQLConnection.ReturnConnection(connection);
+
+            return list;
+        }
+
 
         /// <summary>
         /// 返回执行SQL后，数据库返回的第一个值

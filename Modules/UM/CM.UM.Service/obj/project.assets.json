@@ -2421,11 +2421,13 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
         "LICENSE.md",
+        "Newtonsoft.Json.10.0.3.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -2442,8 +2444,6 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.10.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
         "tools/install.ps1"
       ]
     },
@@ -6144,11 +6144,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
+      "projectUniqueName": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
       "projectName": "CM.UM.Service",
-      "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
+      "projectPath": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\obj\\",
+      "outputPath": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6167,14 +6167,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
             },
-            "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj"
+            "D:\\GuideWeb\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Common\\CM.Common\\CM.Common.csproj"
             },
-            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Model\\CM.UM.Model.csproj"
             }
           }
         }

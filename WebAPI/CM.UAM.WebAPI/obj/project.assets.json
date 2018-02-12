@@ -8216,11 +8216,13 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
         "LICENSE.md",
+        "Newtonsoft.Json.10.0.3.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -8237,8 +8239,6 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.10.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
         "tools/install.ps1"
       ]
     },
@@ -8772,7 +8772,7 @@
       ]
     },
     "System.Buffers/4.4.0": {
-      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "sha512": "xlULC+Aw6a9jst0TNlRx8bNNatSCcE8/brwVO8tINqk9xha7aacgyQPvOb0KF0g52xq77KMzLUeRgcJGUH3B3w==",
       "type": "package",
       "path": "system.buffers/4.4.0",
       "files": [
@@ -8927,7 +8927,7 @@
       ]
     },
     "System.Collections.Immutable/1.4.0": {
-      "sha512": "71hw5RUJRu5+q/geUY69gpXD8Upd12cH+F3MwpXV2zle7Bqqkrmc1JblOTuvUcgmdnUtQvBlV5e1d6RH+H2lvA==",
+      "sha512": "8RHIebgTtnqvF284TGa24dZz3Hr3KNgpnFrzxxELSDMjYXUosxcjmX36JUiFRDqqJa+dV2XEi5OsQP5ltdt9lQ==",
       "type": "package",
       "path": "system.collections.immutable/1.4.0",
       "files": [
@@ -9598,7 +9598,7 @@
       ]
     },
     "System.Diagnostics.FileVersionInfo/4.3.0": {
-      "sha512": "omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
+      "sha512": "2ke7RVKqjp+/n1Qo9jnsoh9l9algYU2oAAOP8t5fwFrwRI7l+Y2GVyhfbnEvmx6HMfe1ZuA1NKHQHBFN5JYTJA==",
       "type": "package",
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "files": [
@@ -10819,7 +10819,7 @@
       ]
     },
     "System.Numerics.Vectors/4.4.0": {
-      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "sha512": "bdWdvjA28lBi0bMiFaH781eGXWreXab81ftzg/sETR1CxWEHB16dgFjtXejPSdmEtk74mtHBdC6MVFPfJ9R8Fg==",
       "type": "package",
       "path": "system.numerics.vectors/4.4.0",
       "files": [
@@ -11469,7 +11469,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.4.0": {
-      "sha512": "9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
+      "sha512": "AAaDPOswXG1yeZF4KBFHnRO2DKhGRmiaremoaCAUgAiUmxvwA1v1AYvSFdiGdtYb1CS/azyPweyJtRrvbHZBLQ==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.4.0",
       "files": [
@@ -13095,7 +13095,7 @@
       ]
     },
     "System.ValueTuple/4.4.0": {
-      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+      "sha512": "jwe9+FZ//qWYiYKL3Z3C7F98+kNvJmaXSXxuwQKc1d1Vw+5N9GSW31u+IUSVn7rjc1LdYGX6wvDNCAhrfFnQXw==",
       "type": "package",
       "path": "system.valuetuple/4.4.0",
       "files": [
@@ -13382,7 +13382,7 @@
       ]
     },
     "System.Xml.XPath/4.3.0": {
-      "sha512": "v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
+      "sha512": "Aj99Z5LKhw9QxhBXz643VBao64/CbVEmEWPMPj8rExUyR9gTeGeu6b+vGqTdgdwAkoufbCaoR3v5Q2VnlMm2aQ==",
       "type": "package",
       "path": "system.xml.xpath/4.3.0",
       "files": [
@@ -13419,7 +13419,7 @@
       ]
     },
     "System.Xml.XPath.XDocument/4.3.0": {
-      "sha512": "jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
+      "sha512": "iockvM9jVCWS7n1VkZgPpjeavdepdNkgrfpHNiIMqtOk300jTUlvL+C23yXy6DiEx14lX9Pr+GRX02bZEfz52w==",
       "type": "package",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "files": [
@@ -13535,11 +13535,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
+      "projectUniqueName": "D:\\GuideWeb\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
       "projectName": "CM.UAM.WebAPI",
-      "projectPath": "E:\\项目\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
+      "projectPath": "D:\\GuideWeb\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\UAM\\WebAPI\\CM.UAM.WebAPI\\obj\\",
+      "outputPath": "D:\\GuideWeb\\UAM\\WebAPI\\CM.UAM.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13558,20 +13558,20 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Common\\CM.Common\\CM.Common.csproj"
+            "D:\\GuideWeb\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Common\\CM.Common\\CM.Common.csproj"
             },
-            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
             },
-            "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj"
             },
-            "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
             },
-            "E:\\项目\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
-              "projectPath": "E:\\项目\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
+            "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
+              "projectPath": "D:\\GuideWeb\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
             }
           }
         }

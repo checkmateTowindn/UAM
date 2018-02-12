@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CM.Common;
 using Microsoft.AspNetCore.Cors;
-using CM.UAM.WebAPI.Models;
 using CM.UM.IService;
 using CM.UM.Service;
 using CM.UM.Model;
@@ -19,6 +18,7 @@ using YunpianInternationalSMSApi;
 using YunpianInternationalSMSApi.Models;
 using System.Runtime.Serialization.Json;
 using YunpianInternationalSMSApi.ReturnModel;
+using CM.UAM.WebAPI.Models;
 
 namespace CM.UAM.WebAPI.Controllers
 {
@@ -89,7 +89,7 @@ namespace CM.UAM.WebAPI.Controllers
                     List<UC_User> list = (List<UC_User>)result.Source;
                     string key = list[0].Id;
                     string jsonData = JsonConvert.SerializeObject(list[0]);
-                    RedisHelper.StringSet(key, jsonData, new TimeSpan(1, 1, 1, 1, 1));
+                    RedisHelper.StringSet(key, jsonData, new TimeSpan(30, 0, 0, 0, 0));
                     result.Source = URL;//返回此URL
 
                 }
@@ -97,23 +97,23 @@ namespace CM.UAM.WebAPI.Controllers
             return Json(result);
         }
         [HttpPost]
-        public JsonResult Register(string URL, string Token, string LoginName = null, string Mobile = null, string Email = null, string PassWord = null, string PassWord2 = null)
+        public JsonResult Register(Register register)
         {
             result.Success = false;
-            if (string.IsNullOrWhiteSpace(URL) || string.IsNullOrWhiteSpace(Token))
+            var number = RedisHelper.StringGet(register.Mobile+ "registerNumber");
+            if (!register.Equals(number))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
-                result.Msg = "注册来源不明！";
+                result.Msg = "验证码错误！";
                 return Json(result);
             }
-
-            if (string.IsNullOrWhiteSpace(LoginName) && string.IsNullOrWhiteSpace(Mobile) && string.IsNullOrWhiteSpace(Email) && string.IsNullOrWhiteSpace(PassWord))
+            if (string.IsNullOrWhiteSpace(register.LoginName) && string.IsNullOrWhiteSpace(register.Mobile) && string.IsNullOrWhiteSpace(register.Email) && string.IsNullOrWhiteSpace(register.PassWord))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "用户名和密码不能为空！";
                 return Json(result);
             }
-            if (PassWord.Equals(PassWord2))
+            if (register.PassWord.Equals(register.PassWord2))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "两次密码不一致！";
@@ -121,10 +121,10 @@ namespace CM.UAM.WebAPI.Controllers
             }
             else
             {
-                model.LoginName = LoginName;
-                model.Mobile = Mobile;
-                model.Email = Email;
-                model.PassWord = PassWord;
+                model.LoginName = register.LoginName;
+                model.Mobile = register.Mobile;
+                model.Email = register.Email;
+                model.PassWord = register.PassWord;
                 result = service.Add(model);
                 if (result.Success == true)
                 {
@@ -132,50 +132,42 @@ namespace CM.UAM.WebAPI.Controllers
                     List<UC_User> list = (List<UC_User>)result.Source;
                     string key = list[0].Id;
                     string jsonData = JsonConvert.SerializeObject(list[0]);
-                    RedisHelper.StringSet(key, jsonData, new TimeSpan(1, 1, 1, 1, 1));
-                    result.Source = URL;//返回此URL
+                    RedisHelper.StringSet(key, jsonData, new TimeSpan(30, 0, 0, 0, 0));
+                    result.Source = register.URL;//返回此URL
                 }
             }
 
             return Json(result);
         }
         [HttpPost]
-        public JsonResult SendVerifyNumber([FromBody]string URL, [FromBody]string Token, [FromBody]string mobile)
+        public JsonResult SendVerifyNumber(SendVerifyNumber sendVerifyNumber)
         {
+            
             result.Success = false;
-            if (string.IsNullOrWhiteSpace(URL) || string.IsNullOrWhiteSpace(Token))
+            if (service.IsRepeat(null,sendVerifyNumber.mobile,null))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
-                result.Msg = "注册来源不明！";
+                result.Msg = "该手机号码已经注册！";
                 return Json(result);
             }
-
             SmsSingleSendModel sm = new SmsSingleSendModel();
-            Config config = new Config("");
-            sm.mobile = mobile;
+            Config config = new Config("ee4096858a640a3938261e8057a0d8b3");
+            sm.mobile = sendVerifyNumber.mobile;
             sm.apikey = config.apikey;
             Random rd = new Random();
-            int number= rd.Next(100000, 99999);
+            int number = rd.Next(100000, 999999);
             sm.text = "【问鼎科技】欢迎注册问鼎科技，您的验证码是" + number.ToString();
             IYunpianInternationalSMS ys = new YunpianInternationalSMS();
-            string res= ys.SingleSendVerificationCode(sm).DataObj.ToString();
+            string res = ys.SingleSendVerificationCode(sm).DataObj.ToString();
             DataContractJsonSerializer deseralizer = new DataContractJsonSerializer(typeof(SmsSingleSendReturnModel));
             SmsSingleSendReturnModel smsSingleSendReturnModel = JsonConvert.DeserializeObject<SmsSingleSendReturnModel>(res);//反序列化
-            if (smsSingleSendReturnModel.code == 0) {
+            if (smsSingleSendReturnModel.code == 0)
+            {
                 result.Success = true;
-                result.Source = URL;//返回此URL
+                result.Source = sendVerifyNumber.URL;//返回此URL
                 result.Msg = "发送成功！";
             }
-            return Json(result);
-        }
-        [HttpPost]
-        public JsonResult Update(UserInfo data)
-        {
-            return Json(result);
-        }
-        [HttpPost]
-        public JsonResult Delete(Register data)
-        {
+            RedisHelper.StringSet(sendVerifyNumber.mobile+ "registerNumber", number.ToString(), new TimeSpan(0, 0, 10,0, 0));
             return Json(result);
         }
     }

@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace CM.UAM.WebAPI.Models
 {
-    public class Login
+    public class BaseModel
     {
-        public string Account { get; set; }
-        public string PassWord { get; set; }
+        public string URL { get; set; }
         public string Token { get; set; }
     }
 }

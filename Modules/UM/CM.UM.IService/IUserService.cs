@@ -12,5 +12,6 @@ namespace CM.UM.IService
         AjaxMsgResult Update(List<string> ids, UC_User model, UC_User operationUser);
         AjaxMsgResult Query(UC_User model, int orderType, int pageSize = 10, int pageIndex = 0, int recordCount = 0);
         AjaxMsgResult Verify(UC_User model);
+        bool IsRepeat(string loginName = null, string mobile = null, string email = null);
     }
 }

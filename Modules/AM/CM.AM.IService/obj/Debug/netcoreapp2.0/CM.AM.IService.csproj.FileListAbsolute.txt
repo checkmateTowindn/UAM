@@ -11,3 +11,16 @@ E:\项目\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.A
 E:\项目\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.AssemblyInfo.cs
 E:\项目\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.dll
 E:\项目\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.pdb
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.AM.IService.deps.json
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.AM.IService.dll
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.AM.IService.pdb
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.AM.Model.dll
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.Common.dll
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.Common.pdb
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\bin\Debug\netcoreapp2.0\CM.AM.Model.pdb
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.csprojResolveAssemblyReference.cache
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.csproj.CoreCompileInputs.cache
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.AssemblyInfoInputs.cache
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.AssemblyInfo.cs
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.dll
+D:\GuideWeb\UAM\Modules\AM\CM.AM.IService\obj\Debug\netcoreapp2.0\CM.AM.IService.pdb

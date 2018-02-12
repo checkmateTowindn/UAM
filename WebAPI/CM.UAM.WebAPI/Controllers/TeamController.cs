@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CM.Common;
-using CM.UAM.WebAPI.Models;
-
 namespace CM.UAM.WebAPI.Controllers
 {
     [Produces("application/json")]
@@ -22,25 +20,25 @@ namespace CM.UAM.WebAPI.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public JsonResult Add(Team data)
-        {
-            return Json(result);
-        }
-        [HttpPost]
-        public JsonResult Delete(Team data)
-        {
-            return Json(result);
-        }
-        [HttpPost]
-        public JsonResult Update(Team data)
-        {
-            return Json(result);
-        }
-        [HttpPost]
-        public JsonResult Query(Team data)
-        {
-            return Json(result);
-        }
+        //[HttpPost]
+        //public JsonResult Add(Team data)
+        //{
+        //    return Json(result);
+        //}
+        //[HttpPost]
+        //public JsonResult Delete(Team data)
+        //{
+        //    return Json(result);
+        //}
+        //[HttpPost]
+        //public JsonResult Update(Team data)
+        //{
+        //    return Json(result);
+        //}
+        //[HttpPost]
+        //public JsonResult Query(Team data)
+        //{
+        //    return Json(result);
+        //}
     }
 }
