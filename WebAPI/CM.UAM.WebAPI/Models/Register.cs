@@ -13,5 +13,7 @@ namespace CM.UAM.WebAPI.Models
         public string PassWord { get; set; }
         public string PassWord2 { get; set; }
         public string VerifyNumber { get; set; }
+        public int? IsValid { get; set; }
+        public int? Status { get; set; }
     }
 }

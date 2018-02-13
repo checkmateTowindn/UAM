@@ -19,6 +19,7 @@ using YunpianInternationalSMSApi.Models;
 using System.Runtime.Serialization.Json;
 using YunpianInternationalSMSApi.ReturnModel;
 using CM.UAM.WebAPI.Models;
+using CM.Common.JQuery;
 
 namespace CM.UAM.WebAPI.Controllers
 {
@@ -50,24 +51,24 @@ namespace CM.UAM.WebAPI.Controllers
             return View();
         }
         [HttpPost]
-        public JsonResult Login(string URL, string Token, string LoginName, string PassWord)
+        public JsonResult Login(Login login)
         {
             result.Success = false;
             //判断token是否正确
-            if (string.IsNullOrWhiteSpace(URL) || string.IsNullOrWhiteSpace(Token))
+            if (string.IsNullOrWhiteSpace(login.URL) || string.IsNullOrWhiteSpace(login.Token))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "登录来源不明！";
                 return Json(result);
             }
-            appInfoModel.Token = Token;
-            if (appService.Verify(appInfoModel).Success == false)
-            {
-                result.State = AjaxMsgResult.StateEnum.VerifyFailed;
-                result.Msg = "登录来源不明！";
-                return Json(result);
-            }
-            if (string.IsNullOrWhiteSpace(LoginName) || string.IsNullOrWhiteSpace(PassWord))
+            //appInfoModel.Token = Token;
+            //if (appService.Verify(appInfoModel).Success == false)
+            //{
+            //    result.State = AjaxMsgResult.StateEnum.VerifyFailed;
+            //    result.Msg = "登录来源不明！";
+            //    return Json(result);
+            //}
+            if (string.IsNullOrWhiteSpace(login.LoginName) || string.IsNullOrWhiteSpace(login.PassWord))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "用户名和密码不能为空！";
@@ -75,13 +76,13 @@ namespace CM.UAM.WebAPI.Controllers
             }
             else {
 
-                model.PassWord = PassWord;
-                if (Com.isTelephone(LoginName))//如果是手机
-                    model.Mobile = LoginName;
-                else if (Com.isMail(LoginName))//如果是邮箱
-                    model.Email = LoginName;
+                model.PassWord = login.PassWord;
+                if (Com.isTelephone(login.LoginName))//如果是手机
+                    model.Mobile = login.LoginName;
+                else if (Com.isMail(login.LoginName))//如果是邮箱
+                    model.Email = login.LoginName;
                 else//如果是登录名
-                    model.LoginName = LoginName;
+                    model.LoginName = login.LoginName;
                 result = service.Verify(model);
                 if (result.Success == true)
                 {
@@ -90,7 +91,7 @@ namespace CM.UAM.WebAPI.Controllers
                     string key = list[0].Id;
                     string jsonData = JsonConvert.SerializeObject(list[0]);
                     RedisHelper.StringSet(key, jsonData, new TimeSpan(30, 0, 0, 0, 0));
-                    result.Source = URL;//返回此URL
+                    result.Source = login.URL;//返回此URL
 
                 }
             }
@@ -101,7 +102,7 @@ namespace CM.UAM.WebAPI.Controllers
         {
             result.Success = false;
             var number = RedisHelper.StringGet(register.Mobile+ "registerNumber");
-            if (!register.Equals(number))
+            if (!register.VerifyNumber.Equals(number))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "验证码错误！";
@@ -113,7 +114,7 @@ namespace CM.UAM.WebAPI.Controllers
                 result.Msg = "用户名和密码不能为空！";
                 return Json(result);
             }
-            if (register.PassWord.Equals(register.PassWord2))
+            if (!register.PassWord.Equals(register.PassWord2))
             {
                 result.State = AjaxMsgResult.StateEnum.VerifyFailed;
                 result.Msg = "两次密码不一致！";
@@ -125,6 +126,8 @@ namespace CM.UAM.WebAPI.Controllers
                 model.Mobile = register.Mobile;
                 model.Email = register.Email;
                 model.PassWord = register.PassWord;
+                model.IsValid=model.IsValid == null?0:model.IsValid;
+                model.Status = model.Status == null ? 0 : model.Status;
                 result = service.Add(model);
                 if (result.Success == true)
                 {
@@ -169,6 +172,11 @@ namespace CM.UAM.WebAPI.Controllers
             }
             RedisHelper.StringSet(sendVerifyNumber.mobile+ "registerNumber", number.ToString(), new TimeSpan(0, 0, 10,0, 0));
             return Json(result);
+        }
+        [HttpPost]
+        public JsonResult GetUserList(JQParas jq)
+        {
+            return Json(service.Get(jq));
         }
     }
 }

@@ -32,13 +32,14 @@ E:\项目\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\YunpianInternationalSMSAp
 D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.deps.json
 D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.dll
 D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.pdb
-D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\EasyLib.Core.dll
 D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\NLog.dll
 D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Yunpian.dll
 D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll
-D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csproj.CoreCompileInputs.cache
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfoInputs.cache
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb
+D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
+D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.xml

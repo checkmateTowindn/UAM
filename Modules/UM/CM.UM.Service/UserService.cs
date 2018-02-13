@@ -11,13 +11,16 @@ using System.ComponentModel;
 using Newtonsoft.Json.Linq;
 using CM.Common.MySQL;
 using CM.Common.Model;
+using CM.Common.JQuery;
+using Newtonsoft.Json;
+using CM.UM.Model.Ext;
 
 namespace CM.UM.Service
 {
     public class UserService : IUserService
     {
         AjaxMsgResult result = new AjaxMsgResult();
-
+        IUserExtendService userExtendService = new UserExtendService();
         //IDataBase con = new PostgreSQL();
         #region 添加用户
         /// <summary>
@@ -25,7 +28,7 @@ namespace CM.UM.Service
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public AjaxMsgResult Add(UC_User model)
+        public AjaxMsgResult Add(UC_User model,string CreateUser=null)
         {
             result.Success = false;
             try
@@ -44,21 +47,23 @@ namespace CM.UM.Service
                 }
                 Dictionary<string, object> dic = new Dictionary<string, object>();
                 StringBuilder sql = new StringBuilder();
-                sql.Append(@" INSERT INTO UC_User(Id,UserName,LoginName,PassWord,IsValid,Status,Mobile,CreateUser,CreateTime,UserExtendId) VALUES (?Id,?UserName,?LoginName,?PassWord,?IsValid,?Status,?Mobile,?CreateUser,?CreateTime,?UserExtendId)");
-                dic.Add("Id", NewData.NewId("YH"));
+                sql.Append(@" INSERT INTO UC_User(Id,UserName,LoginName,PassWord,IsValid,Status,Mobile,CreateUser,CreateTime) VALUES (?Id,?UserName,?LoginName,?PassWord,?IsValid,?Status,?Mobile,?CreateUser,?CreateTime)");
+                string id = NewData.NewId("YH");
+                dic.Add("Id", id);
                 dic.Add("UserName", model.UserName);
                 dic.Add("LoginName", model.LoginName);
                 dic.Add("PassWord", Com.SHA512Encrypt(model.PassWord));
-                dic.Add("IsValid", model.IsValid);
+                dic.Add("IsValid",model.IsValid);
                 dic.Add("Status", model.Status);
                 dic.Add("Mobile", model.Mobile);
-                dic.Add("CreateUser", model.CreateUser);
+                dic.Add("CreateUser", CreateUser==null? id:model.CreateUser);
                 dic.Add("CreateTime", DateTime.Now);
-                dic.Add("UserExtendId", model.UserExtendId);
                 int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
                 if (count == 1)
                 {
-                    result = Verify(model);
+                    if (userExtendService.Add(id).Success == true) {
+                        result = Verify(model);
+                    }
                 }
                 else
                 {
@@ -286,7 +291,7 @@ namespace CM.UM.Service
                 page.OrderType= Convert.ToInt16(orderType);
                 page.PageIndex = pageIndex;
                 page.SortName = orderColumnName;
-                IList<UC_User> list = (MySqlHelper.ExecuteReader<UC_User>(sublistSql.ToString(),dic));
+                IList<UC_User> list = (MySqlHelper.ExecuteReader<UC_User>(sublistSql.ToString(),true,dic));
             }
             catch (Exception e)
             {
@@ -331,8 +336,7 @@ namespace CM.UM.Service
                 }
                 sql.Append(@" AND PassWord=?PassWord ");
                 dic.Add("PassWord", Com.SHA512Encrypt(model.PassWord));
-               // List<UC_User> data = null;
-                List<UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), dic);
+                List<UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), true, dic);
                 if (data != null)
                 {
                     if (data.Count > 0)
@@ -387,7 +391,7 @@ namespace CM.UM.Service
                     dic.Add("Email", email);
                 }
                // List<UC_User> data = null;
-                List <UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), dic);
+                List <UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), true, dic);
                 
                 if (data!=null)
                 {
@@ -410,16 +414,118 @@ namespace CM.UM.Service
         }
         #endregion
 
+        /// <summary>
+        /// 用户个数
+        /// </summary>
+        /// <returns></returns>
+        public string UserCount()
+        {
+            result.Success = false;
+            string sql = " SELECT COUNT(*) FROM UC_User ";
+            return MySqlHelper.ExecuteSingle(sql);
+        }
 
-        //public AjaxMsgResult SSO()
-        //{
-        //    //生成token
-        //    var token = Guid.NewGuid().ToString();
-        //    //写入token
-        //    //Common.Common.AddCookie("token", token, Int32.Parse(ConfigurationManager.AppSettings["Timeout"]));
-        //    ////写入凭证
-        //    RedisClient client = new RedisClient(ConfigurationManager.AppSettings["RedisServer"], 6379);
-        //    client.Set<UserInfo>(token, userInfo);
-        //}
+
+
+
+
+        /// <summary>
+        /// 获取
+        /// </summary>
+        /// <returns></returns>
+        public JQResult<UC_User_Ext> Get(JQParas Paras)
+        {
+            //默认初始化
+            JQResult<UC_User_Ext> result = new JQResult<UC_User_Ext>();
+            result.page = Paras.page;
+                Dictionary<string, object> DbParas = new Dictionary<string, object>();
+
+                string SQL_base = "SELECT Id,UserName,LoginName,IsValid,Status,Mobile,Email,CreateUser,DATE_FORMAT(CreateTime,'%Y-%c-%d %h:%i:%s') AS CreateTimeStr FROM UC_User WHERE 1=1 AND IsValid=0 ";
+
+                #region 搜索(注意字符串类型注入)
+
+                StringBuilder serchstr = new StringBuilder();
+            UC_User_Ext _csearch;
+                if (!string.IsNullOrWhiteSpace(Paras.cSearch))
+                    _csearch = JsonConvert.DeserializeObject<UC_User_Ext>(Paras.cSearch);
+                else
+                    _csearch = new UC_User_Ext();
+
+
+            if (!string.IsNullOrWhiteSpace(_csearch.UserName))
+            {
+                if (serchstr.Length > 0) serchstr.Append(" AND ");
+                DbParas.Add("@UserName", "%" + _csearch.UserName+"%");
+                serchstr.Append("UserName LIKE @UserName");
+            }
+            if (!string.IsNullOrWhiteSpace(_csearch.LoginName))
+            {
+                if (serchstr.Length > 0) serchstr.Append(" AND ");
+                DbParas.Add("@LoginName", "%" + _csearch.LoginName + "%");
+                serchstr.Append("LoginName LIKE @LoginName");
+            }
+            if (!string.IsNullOrWhiteSpace(_csearch.Mobile))
+            {
+                if (serchstr.Length > 0) serchstr.Append(" AND ");
+                DbParas.Add("@Mobile", "%" + _csearch.Mobile + "%");
+                serchstr.Append("Mobile LIKE @Mobile");
+            }
+            if (!string.IsNullOrWhiteSpace(_csearch.Email))
+            {
+                if (serchstr.Length > 0) serchstr.Append(" AND ");
+                DbParas.Add("@Email", "%"+_csearch.Email + "%");
+                serchstr.Append("Email LIKE @Email");
+            }
+            if (_csearch.Status!=null)
+            {
+                if (serchstr.Length > 0) serchstr.Append(" AND ");
+                DbParas.Add("@Status", _csearch.Status);
+                serchstr.Append("Status LIKE @Status");
+            }
+
+            if (serchstr.Length > 0) SQL_base += serchstr.ToString();
+                #endregion
+
+                #region 排序
+
+                string SortUnion = "ORDER BY ";
+                //默认排序方式
+                SortUnion += string.IsNullOrWhiteSpace(Paras.sidx) ? "__TMP__ID" : Paras.sidx;
+                SortUnion += " " + (string.IsNullOrWhiteSpace(Paras.sord) ? "DESC" : Paras.sord);
+                #endregion
+
+                PageHelperParas php = new PageHelperParas()
+                {
+                    types = 1,
+                    rows = Paras.rows,
+                    page = Paras.page,
+                    SortUnion = SortUnion
+                };
+
+                if (Paras.export)//导出
+                {
+                    php.dataSql = string.Format("SELECT {0} FROM ({1}) B", "*", SQL_base);
+                    php.exportColumnName = new List<string> { "序号", "名称" };
+                    php.exportIgnoreColumnName = new List<string>() { "__TMP__ID", "FormTypeID", "OUID", "ParentID", "Gradecode", "parent", "leaf", "expanded", "loaded", "level" };
+
+                    php.export = Paras.export;
+                    php.exportAll = (Paras.exportType == 0);
+                    php.exportFileName = Paras.exportFileName;
+                    php.start_page = Paras.exportStartPage;
+                    php.end_page = Paras.exportEndPage;
+                }
+                else//分页查询
+                {
+                    php.dataSql = string.Format("SELECT {0} FROM ({1}) B", "*", SQL_base);
+                    php.countSql = string.Format("SELECT {0} FROM ({1}) B", "count(1)", SQL_base);
+                }
+
+                PageHelper.Query<UC_User_Ext>(php, ref result, DbParas);
+            
+            return result;
+        }
+
+
+
     }
 }

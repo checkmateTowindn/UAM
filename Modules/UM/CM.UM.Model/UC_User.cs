@@ -44,6 +44,5 @@ namespace CM.UM.Model
         public string Email { get; set; }
         public string CreateUser { get; set; }
         public DateTime CreateTime { get; set; }
-        public string UserExtendId { get; set; }
     }
 }

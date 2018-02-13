@@ -1,0 +1,8 @@
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\bin\Release\netcoreapp2.0\CM.UM.Model.deps.json
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\bin\Release\netcoreapp2.0\CM.UM.Model.dll
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\bin\Release\netcoreapp2.0\CM.UM.Model.pdb
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\obj\Release\netcoreapp2.0\CM.UM.Model.csproj.CoreCompileInputs.cache
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\obj\Release\netcoreapp2.0\CM.UM.Model.AssemblyInfoInputs.cache
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\obj\Release\netcoreapp2.0\CM.UM.Model.AssemblyInfo.cs
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\obj\Release\netcoreapp2.0\CM.UM.Model.dll
+D:\GuideWeb\UAM\Modules\UM\CM.UM.Model\obj\Release\netcoreapp2.0\CM.UM.Model.pdb

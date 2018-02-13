@@ -19,6 +19,7 @@ namespace UnitTestProject
     public class UnitTest1
     {
         IUserService con = new UserService();
+        IUserExtendService userExtendService = new UserExtendService();
         AjaxMsgResult result = new AjaxMsgResult();
         [TestMethod]
         public void RedisTest()
@@ -84,6 +85,13 @@ namespace UnitTestProject
             model.PassWord = "123456";
             result = con.Verify(model);
         }
+
+        [TestMethod]
+        public void addUserExtendService()
+        {
+            result = userExtendService.Add("YH04eb525ecb64426ea23e209fb7a5982c");
+        }
+        
         public class Number
         {
             public string a1;

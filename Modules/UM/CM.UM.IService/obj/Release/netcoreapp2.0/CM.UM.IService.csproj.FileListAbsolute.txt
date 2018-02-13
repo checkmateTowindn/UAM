@@ -1,0 +1,13 @@
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.UM.IService.deps.json
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.UM.IService.dll
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.UM.IService.pdb
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.Common.dll
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.UM.Model.dll
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.Common.pdb
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\bin\Release\netcoreapp2.0\CM.UM.Model.pdb
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\obj\Release\netcoreapp2.0\CM.UM.IService.csprojResolveAssemblyReference.cache
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\obj\Release\netcoreapp2.0\CM.UM.IService.csproj.CoreCompileInputs.cache
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\obj\Release\netcoreapp2.0\CM.UM.IService.AssemblyInfoInputs.cache
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\obj\Release\netcoreapp2.0\CM.UM.IService.AssemblyInfo.cs
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\obj\Release\netcoreapp2.0\CM.UM.IService.dll
+D:\GuideWeb\UAM\Modules\UM\CM.UM.IService\obj\Release\netcoreapp2.0\CM.UM.IService.pdb

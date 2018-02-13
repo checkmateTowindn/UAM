@@ -65,8 +65,6 @@ D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\CM.UM.IService.dll
 D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\CM.UM.Model.dll
 D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\CM.UM.Service.dll
 D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll
-D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\EasyLib.Core.dll
-D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\NLog.dll
 D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\CM.Common.pdb
 D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\CM.AM.IService.pdb
 D:\GuideWeb\UAM\WebAPI\CM.UAM.WebAPI\bin\Debug\netcoreapp2.0\CM.AM.Service.pdb

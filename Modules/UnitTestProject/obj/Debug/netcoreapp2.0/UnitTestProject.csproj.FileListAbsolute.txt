@@ -80,15 +80,13 @@ D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.UM.IService.d
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.UM.Model.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.UM.Service.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll
-D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\EasyLib.Core.dll
-D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\NLog.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.Common.pdb
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.UM.IService.pdb
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.UM.Service.pdb
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\CM.UM.Model.pdb
-D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.csprojResolveAssemblyReference.cache
 D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.csproj.CoreCompileInputs.cache
 D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.AssemblyInfoInputs.cache
 D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.AssemblyInfo.cs
 D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.pdb
+D:\GuideWeb\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.csprojResolveAssemblyReference.cache

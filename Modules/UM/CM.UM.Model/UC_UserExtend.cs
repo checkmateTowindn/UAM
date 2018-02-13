@@ -5,9 +5,8 @@ using System.Text;
 namespace CM.UM.Model
 {
     [Serializable]
-    public class UC_UserExtend
+    public class UC_UserExtend:UC_User
     {
-        public string Id { get; set; }
         public string QQ { get; set; }
         public string OpenId { get; set; }
         public string RealName { get; set; }
