@@ -4817,6 +4817,7 @@
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.5",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
           "MySql.Data": "6.10.6",
           "Newtonsoft.Json": "10.0.3",
           "Npgsql": "3.2.6"

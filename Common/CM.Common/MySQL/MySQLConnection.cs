@@ -7,7 +7,7 @@ namespace CM.Common.MySQL
 {
     public static class MySQLConnection
     {
-        private static string connectionString = @"Host=slightcold.date;Port=3306;Username=root;Password=qaz123456;Database=UAM";
+        private static string connectionString = @"Host=slightcold.date;Port=3306;Username=root;Password=qaz123456;Database=UAM;Charset=utf8";
         private static Queue<MySqlConnection> connectionQueue = new Queue<MySqlConnection>();
         private static MySqlConnection baseConnection = new MySqlConnection(connectionString);
         private static  MySqlCommand baseCommand = new MySqlCommand();
