@@ -41,5 +41,3 @@ D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
-D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.dll
-D:\GuideWeb\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.xml

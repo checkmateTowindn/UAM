@@ -104,7 +104,8 @@ namespace CM.Common.JQuery
                         SortUnionStr=tmpSortUnion;
 
                 //SQL_last.AppendFormat("SELECT {2} SUB1.* FROM (SELECT (@CM_ROWNO:=@CM_ROWNO+1) cRowNum,SUB.* FROM ({0}) SUB,(SELECT   @CM_ROWNO:=0) CM_ROWNOTB {1}) SUB1", ph_paras.dataSql, SortUnionStr, (ph_paras.export || ph_paras.types == 2) ? "" : "SQL_CALC_FOUND_ROWS");
-                SQL_last.AppendFormat("SELECT {2} SUB1.* FROM (SELECT (@BC_TT_ROWNO:=@BC_TT_ROWNO+1) cRowNum,SUB.* FROM ({0}) SUB,(SELECT   @BC_TT_ROWNO:=0) BC_TT_ROWNOTB {1}) SUB1", ph_paras.dataSql, SortUnionStr, (ph_paras.export || ph_paras.types == 2) ? "" : "SQL_CALC_FOUND_ROWS");
+                SQL_last.AppendFormat("SELECT {2} SUB1.* FROM (SELECT 1 cRowNum,SUB.* FROM ({0}) SUB,(SELECT   1) CM_ROWNOTB {1}) SUB1", ph_paras.dataSql, SortUnionStr, (ph_paras.export || ph_paras.types == 2) ? "" : "SQL_CALC_FOUND_ROWS");
+                //SQL_last.AppendFormat("SELECT {2} SUB1.* FROM (SELECT (@BC_TT_ROWNO:=@BC_TT_ROWNO+1) cRowNum,SUB.* FROM ({0}) SUB,(SELECT   @BC_TT_ROWNO:=0) BC_TT_ROWNOTB {1}) SUB1", ph_paras.dataSql, SortUnionStr, (ph_paras.export || ph_paras.types == 2) ? "" : "SQL_CALC_FOUND_ROWS");
                 if (ph_paras.export || ph_paras.types == 2)
                 {//导出及treegrid
                     if (!ph_paras.exportAll)//按页导出
@@ -119,7 +120,7 @@ namespace CM.Common.JQuery
 
                 if (!string.IsNullOrWhiteSpace(afterSql)) SQL_last.Append(afterSql);
 
-                DataSet ds = MySqlHelper.ExecuteDataSet(SQL_last.ToString(), DbParas);
+                DataSet ds = MySqlHelper.ExecuteDataSet(SQL_last.ToString(), CommandType.Text,DbParas);
 
                 if (ph_paras.export || ph_paras.types == 2)
                 {//导出及treegrid

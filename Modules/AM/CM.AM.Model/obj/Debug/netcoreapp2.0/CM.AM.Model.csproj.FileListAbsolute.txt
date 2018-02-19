@@ -33,3 +33,4 @@ D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.Assem
 D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.AssemblyInfo.cs
 D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.dll
 D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.pdb
+D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.csprojResolveAssemblyReference.cache

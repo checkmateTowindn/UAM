@@ -456,31 +456,31 @@ namespace CM.UM.Service
             {
                 if (serchstr.Length > 0) serchstr.Append(" AND ");
                 DbParas.Add("@UserName", "%" + _csearch.UserName+"%");
-                serchstr.Append("UserName LIKE @UserName");
+                serchstr.Append("AND UserName LIKE @UserName");
             }
             if (!string.IsNullOrWhiteSpace(_csearch.LoginName))
             {
                 if (serchstr.Length > 0) serchstr.Append(" AND ");
                 DbParas.Add("@LoginName", "%" + _csearch.LoginName + "%");
-                serchstr.Append("LoginName LIKE @LoginName");
+                serchstr.Append(" AND LoginName LIKE @LoginName");
             }
             if (!string.IsNullOrWhiteSpace(_csearch.Mobile))
             {
                 if (serchstr.Length > 0) serchstr.Append(" AND ");
                 DbParas.Add("@Mobile", "%" + _csearch.Mobile + "%");
-                serchstr.Append("Mobile LIKE @Mobile");
+                serchstr.Append(" AND Mobile LIKE @Mobile");
             }
             if (!string.IsNullOrWhiteSpace(_csearch.Email))
             {
                 if (serchstr.Length > 0) serchstr.Append(" AND ");
                 DbParas.Add("@Email", "%"+_csearch.Email + "%");
-                serchstr.Append("Email LIKE @Email");
+                serchstr.Append(" AND Email LIKE @Email");
             }
             if (_csearch.Status!=null)
             {
                 if (serchstr.Length > 0) serchstr.Append(" AND ");
                 DbParas.Add("@Status", _csearch.Status);
-                serchstr.Append("Status LIKE @Status");
+                serchstr.Append(" AND Status LIKE @Status");
             }
 
             if (serchstr.Length > 0) SQL_base += serchstr.ToString();
