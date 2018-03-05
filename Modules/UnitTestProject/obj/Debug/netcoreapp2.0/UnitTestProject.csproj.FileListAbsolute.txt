@@ -65,8 +65,6 @@ E:\项目\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.As
 E:\项目\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.dll
 E:\项目\UAM\Modules\UnitTestProject\obj\Debug\netcoreapp2.0\UnitTestProject.pdb
 E:\项目\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll
-E:\项目\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\EasyLib.Core.dll
-E:\项目\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\NLog.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\GuideWeb\UAM\Modules\UnitTestProject\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll

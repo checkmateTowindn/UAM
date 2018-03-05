@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using CM.Common;
 using CM.UM.IService;
-using CM.AM.IService;
+using CM.TM.IService;
 using CM.UM.Model;
-using CM.AM.Model;
-using CM.AM.Service;
+using CM.TM.Model;
+using CM.TM.Service;
 using CM.UM.Service;
 
 namespace CM.UAM.WebAPI.Controllers
@@ -22,7 +22,7 @@ namespace CM.UAM.WebAPI.Controllers
     {
         AjaxMsgResult result = new AjaxMsgResult();
         IUserService service = new UserService();
-        IAppService appService = new AppService();
+        IAppService<UC_AppInfo> appService = new AppService();
         UC_User userModel = new UC_User();
         UC_AppInfo appInfoModel = new UC_AppInfo();
         [HttpPost]

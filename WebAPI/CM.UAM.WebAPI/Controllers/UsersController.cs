@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Cors;
 using CM.UM.IService;
 using CM.UM.Service;
 using CM.UM.Model;
-using CM.AM.IService;
-using CM.AM.Service;
-using CM.AM.Model;
+using CM.TM.IService;
+using CM.TM.Service;
+using CM.TM.Model;
 using Common;
 using Newtonsoft.Json;
 using YunpianInternationalSMSApi;
@@ -30,7 +30,7 @@ namespace CM.UAM.WebAPI.Controllers
     {
         AjaxMsgResult result = new AjaxMsgResult();
         IUserService service = new UserService();
-        IAppService appService = new AppService();
+        IAppService<UC_AppInfo> appService = new AppService();
         UC_User model = new UC_User();
         UC_AppInfo appInfoModel = new UC_AppInfo();
         // GET: api/Users

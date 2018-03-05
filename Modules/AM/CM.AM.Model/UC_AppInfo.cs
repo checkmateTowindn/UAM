@@ -1,17 +1,38 @@
 ﻿using System;
 
-namespace CM.AM.Model
+namespace CM.TM.Model
 {
     [Serializable]
     public class UC_AppInfo
     {
-        public string Id { get; set; }
-        public string AppName { get; set; }
-        public string Token { get; set; }
-        public string Description { get; set; }
-        public string AddressURL { get; set; }
-        public int? Status { get; set; }
-        public string CreateUser { get; set; }
-        public DateTime CreateTime { get; set; }
+        private string id;
+        private string appname;
+        private string token;
+        private string description;
+        private string addressurl;
+        private int status;
+        private string createuser;
+        private DateTime createtime;
+        public UC_AppInfo() { } 
+        public UC_AppInfo(string id, string appname, string token, string description, string addressurl, int status, string createuser, DateTime createtime)
+        {
+            this.id = id;
+            this.appname = appname;
+            this.token = token;
+            this.description = description;
+            this.addressurl = addressurl;
+            this.status = status;
+            this.createuser = createuser;
+            this.createtime = createtime;
+        }
+
+        public string Id { get => id; set => id = value; }
+        public string AppName { get => appname; set => appname = value; }
+        public string Token { get => token; set => token = value; }
+        public string Description { get => description; set => description = value; }
+        public string AddressURL { get => addressurl; set => addressurl = value; }
+        public int Status { get => status; set => status = value; }
+        public string CreateUser { get => createuser; set => createuser = value; }
+        public DateTime CreateTime { get => createtime; set => createtime = value; }
     }
 }

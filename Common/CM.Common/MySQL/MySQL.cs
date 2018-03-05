@@ -1,40 +1,23 @@
 ﻿using System;
 using System.Data;
-using System.IO;
 using System.Linq;
-using System.Text;
 using MySql.Data.MySqlClient;
-using System.Configuration;
 using System.Collections.Generic;
-using CM.Common.Model;
 using System.Reflection;
+using CM.Common.Interface;
+using CM.Common.MySQL;
 
-namespace CM.Common.MySQL
+namespace CM.Common.Data
 {
-    /// <summary>
-    /// MySqlHelper操作类
-    /// </summary>
-    public static class MySqlHelper
+    public class MySQL : IDataBase
     {
-        /// <summary>
-        /// 超时时间
-        /// </summary>
-        public static int CommandTimeOut = 600;
+        internal MySQL() { }
 
-        /// <summary>
-        ///初始化MySqlHelper实例
-        /// </summary>
-        /// <param name="connectionString">数据库连接字符串</param>
+        public static int CommandTimeOut = 600;
+        
         public static string ConnectionString = @"Host=slightcold.date;Port=3306;Username=root;Password=qaz123456;Database=UAM";
 
-        /// <summary>  
-        /// 返回DataSet  
-        /// </summary>  
-        /// <param name="cmdText">命令字符串</param>  
-        /// <param name="cmdType">命令类型</param>  
-        /// <param name="commandParameters">可变参数</param>  
-        /// <returns> DataSet </returns>  
-        public static DataSet ExecuteDataSet(string sql, CommandType cmdType=CommandType.Text, Dictionary<string, object> dic = null)
+        public DataSet ExecuteDataSet(string sql, CommandType cmdType=CommandType.Text, Dictionary<string, object> dic = null)
         {
             DataSet result = null;
 
@@ -73,14 +56,8 @@ namespace CM.Common.MySQL
 
             return result;
         }
-        /// <summary>  
-        /// DataSetToList  
-        /// </summary>  
-        /// <typeparam name="T">转换类型</typeparam>  
-        /// <param name="dataSet">数据源</param>  
-        /// <param name="tableIndex">需要转换表的索引</param>  
-        /// <returns></returns>  
-        public static List<T> DataSetToList<T>(DataSet dataSet, int tableIndex)
+        
+        public IList<T> DataSetToList<T>(DataSet dataSet, int tableIndex)
         {
             //确认参数有效  
             if (dataSet == null || dataSet.Tables.Count <= 0 || tableIndex < 0)
@@ -120,8 +97,7 @@ namespace CM.Common.MySQL
             return list.ToList();
         }
 
-
-        public static int ExecuteNonQuery(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text)
+        public int ExecuteNonQuery(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text)
         {
             MySqlConnection connection = MySQLConnection.GetMySqlConnection();
             List<MySqlParameter> parameters = new List<MySqlParameter>();
@@ -146,13 +122,7 @@ namespace CM.Common.MySQL
 
         }
 
-        /// <summary>
-        /// 将执行SQL后获得的信息映射为类型T的数据，如果数据不为空则返回数据，否则返回null，注意：字段名必须和数据库列名一致
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="sql"></param>
-        /// <returns></returns>
-        public static List<T> ExecuteReader<T>(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
+        public IList<T> ExecuteReader<T>(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
         {
             List<T> list = null;
 
@@ -212,10 +182,7 @@ namespace CM.Common.MySQL
             return list;
         }
 
-
-
-
-        public static List<T> ExecuteReader<T>(String sql, bool isType, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
+        public IList<T> ExecuteReader<T>(String sql, bool isType, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
         {
             List<T> list = null;
 
@@ -275,15 +242,7 @@ namespace CM.Common.MySQL
             return list;
         }
 
-
-        /// <summary>
-        /// 返回执行SQL后，数据库返回的第一个值
-        /// </summary>
-        /// <param name="sql">sql语句</param>
-        /// <param name="parameters">sql所需参数</param>
-        /// <param name="commandType">执行sql的类型</param>
-        /// <returns></returns>
-        public static string ExecuteSingle(string sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text)
+        public string ExecuteSingle(string sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text)
         {
             MySqlConnection connection = MySQLConnection.GetMySqlConnection();
             List<MySqlParameter> parameters = new List<MySqlParameter>();
@@ -306,21 +265,24 @@ namespace CM.Common.MySQL
 
             return value;
         }
-
-        /// <summary>
-        /// 执行查询
-        /// 
-        /// </summary>
-        /// <typeparam name="T">实体类型</typeparam><param name="commandText">查询语句或储存过程名</param><param name="parameterValues">参数</param><param name="cmdtype">文本或储存过程</param><param name="timeout">超时时间，单位秒，为null不重新设置</param>
-        /// <returns/>
-        public static IList<T> Get<T>(string commandText, Dictionary<string, object> parameterValues = null, CommandType cmdtype = CommandType.Text) where T : class
+        
+        public IList<T> Get<T>(string commandText, Dictionary<string, object> parameterValues = null, CommandType cmdtype = CommandType.Text) where T : class
         {
-            IList<T> list = (IList<T>)new List<T>();
+            IList<T> list = new List<T>();
             DataSet dataSet = ExecuteDataSet(commandText, cmdtype, parameterValues);
             if (dataSet != null && dataSet.Tables.Count > 0)
                 list = DataSetToList<T>(dataSet,0);
             return list;
         }
 
+        public IList<T> Paging<T>(List<string> fields, int p_PageSize, int p_PageIndex, int p_OrderType, string p_OrderColumnName, string sublistSql, ref int p_RecordCount, Dictionary<string, object> dic = null) where T : class, new()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static IDataBase GetDataBase()
+        {
+            return new MySQL();
+        }
     }
-    }
+}

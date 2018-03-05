@@ -1,18 +1,17 @@
 ﻿using CM.Common;
-using CM.AM.Model;
+using CM.TM.Model;
 using System;
 using System.Collections.Generic;
 
 
-namespace CM.AM.IService
+namespace CM.TM.IService
 {
-    public interface IAppService
+    public interface IAppService<App> where App : class
     {
-
-        AjaxMsgResult Add(UC_AppInfo model);
-        //AjaxMsgResult Del(List<string> ids, UC_AppInfo operationUser);
-        //AjaxMsgResult Update(List<string> ids, UC_AppInfo model, UC_AppInfo operationUser);
-        AjaxMsgResult Query(UC_AppInfo model, int orderType, int pageSize = 10, int pageIndex = 0, int recordCount = 0);
-        AjaxMsgResult Verify(UC_AppInfo model);
+        int Add(App app);
+        int Delete(List<string> id);
+        int Update(App app);
+        IList<App> Query(App app, int count);
+        App Get(String id);
     }
 }

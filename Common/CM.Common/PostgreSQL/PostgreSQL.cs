@@ -10,6 +10,16 @@ namespace CM.Common.PostgreSQL
 {
     public class PostgreSQL : IDataBase
     {
+        public IList<T> DataSetToList<T>(DataSet dataSet, int tableIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet ExecuteDataSet(string sql, CommandType cmdType = CommandType.Text, Dictionary<string, object> dic = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public int ExecuteNonQuery(String sql, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text)
         {
             NpgsqlConnection connection = PostgreSQLConnection.GetNpgsqlConnection();
@@ -17,7 +27,7 @@ namespace CM.Common.PostgreSQL
             foreach (var item in dic)
             {
                 object type = item.Value;
-                type = type == null ? DBNull.Value : type;
+                type = type ?? DBNull.Value;
                 NpgsqlParameter parm = new NpgsqlParameter(item.Key, type);
                 parameters.Add(parm);
             }
@@ -47,7 +57,7 @@ namespace CM.Common.PostgreSQL
             foreach (var item in dic)
             {
                 object type = item.Value;
-                type = type == null ? DBNull.Value : type;
+                type = type ?? DBNull.Value;
                 NpgsqlParameter parm = new NpgsqlParameter(item.Key, type);
                 parameters.Add(parm);
             }
@@ -93,6 +103,11 @@ namespace CM.Common.PostgreSQL
             return list;
         }
 
+        public IList<T> ExecuteReader<T>(string sql, bool isType, Dictionary<string, object> dic = null, CommandType commandType = CommandType.Text) where T : class, new()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 返回执行SQL后，数据库返回的第一个值
         /// </summary>
@@ -107,7 +122,7 @@ namespace CM.Common.PostgreSQL
             foreach (var item in dic)
             {
                 object type = item.Value;
-                type = type == null ? DBNull.Value : type;
+                type = type ?? DBNull.Value;
                 NpgsqlParameter parm = new NpgsqlParameter(item.Key, type);
                 parameters.Add(parm);
             }
@@ -119,6 +134,16 @@ namespace CM.Common.PostgreSQL
             PostgreSQLConnection.ReturnConnection(connection);
 
             return value;
+        }
+
+        public IList<T> Get<T>(string commandText, Dictionary<string, object> parameterValues = null, CommandType cmdtype = CommandType.Text) where T : class
+        {
+            throw new NotImplementedException();
+        }
+
+        public IDataBase GetDataBase()
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -151,6 +176,16 @@ namespace CM.Common.PostgreSQL
             sql.Append(" ORDER BY " + p_OrderColumnName + " " + (p_OrderType == 1 ? "DESC" : "ASC") + " )");
             List<T> list = ExecuteReader<T>(sql.ToString(), dic);
             return list;
+        }
+
+        IList<T> IDataBase.ExecuteReader<T>(string sql, Dictionary<string, object> dic, CommandType commandType)
+        {
+            throw new NotImplementedException();
+        }
+
+        IList<T> IDataBase.Paging<T>(List<string> fields, int p_PageSize, int p_PageIndex, int p_OrderType, string p_OrderColumnName, string sublistSql, ref int p_RecordCount, Dictionary<string, object> dic)
+        {
+            throw new NotImplementedException();
         }
     }
 }

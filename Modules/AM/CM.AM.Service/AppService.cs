@@ -9,68 +9,77 @@ using System.ComponentModel;
 using Newtonsoft.Json.Linq;
 using CM.Common.MySQL;
 using CM.Common.Model;
-using CM.AM.IService;
-using CM.AM.Model;
+using CM.TM.IService;
+using CM.TM.Model;
+using CM.Common.Data;
 
-namespace CM.AM.Service
+namespace CM.TM.Service
 {
-    public class AppService : IAppService
+    public class AppService : IAppService<UC_AppInfo>
     {
         AjaxMsgResult result = new AjaxMsgResult();
 
         #region 注册APP
         /// <summary>
-        /// 添加用户
+        /// 注册app
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public AjaxMsgResult Add(UC_AppInfo model)
+        public int Add(UC_AppInfo model)
         {
-            result.Success = false;
-            try
-            {
-               
-                if (string.IsNullOrWhiteSpace(model.AppName) || string.IsNullOrWhiteSpace(model.AddressURL))
-                {
-                    result.State = AjaxMsgResult.StateEnum.VerifyFailed;
-                    result.Msg = "应用名称和地址不能为空！";
-                    return result;
-                }
-                model.Token = Com.SHA512Encrypt(NewData.NewId());
-                Dictionary<string, object> dic = new Dictionary<string, object>();
-                StringBuilder sql = new StringBuilder();
-                sql.Append(@" INSERT INTO UC_AppInfo(Id,AppName,Token,Description,AddressURL,Status,CreateUser,CreateTime) VALUES (?Id,?AppName,?Token,?Description,?AddressURL,?Status,?CreateUser,?CreateTime)");
-                model.Id= NewData.NewId("APP");
-                model.Token= Com.SHA512Encrypt(model.Id+"checkmate");
-                dic.Add("Id", model.Id);
-                dic.Add("AppName", model.AppName);
-                dic.Add("LoginName", model.Token);
-                dic.Add("PassWord", Com.SHA512Encrypt(model.Description));
-                dic.Add("IsValid", model.AddressURL);
-                dic.Add("Status", model.Status);
-                dic.Add("Mobile", model.CreateUser);
-                dic.Add("CreateUser", model.CreateUser);
-                dic.Add("CreateTime", DateTime.Now);
-                int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
-                if (count == 1)
-                {
-                    result.Success = true;
-                }
-                else
-                {
-                    result.Msg = "添加失败，请检查数据合法性!";
-                }
-            }
-            catch (Exception e)
-            {
-                result.Msg = e.ToString();
-            }
-            return result;
-        }
 
+            Dictionary<string, object> dic = new Dictionary<string, object>();
+            StringBuilder sql = new StringBuilder();
+            sql.Append(@" INSERT INTO UC_AppInfo(id,appname,token,description,addressurl,status,createuser,createtime) VALUES (:Id,:AppName,:Token,:Description,:AddressURL,:Status,:CreateUser,:CreateTime)");
+            model.Id = NewData.NewId("APP");
+            model.Token = Com.SHA512Encrypt(model.Id + "checkmate");
+            dic.Add("Id", model.Id);
+            dic.Add("AppName", model.AppName);
+            dic.Add("Token", model.Token);
+            dic.Add("Description", model.Description);
+            dic.Add("AddressURL", model.AddressURL);
+            dic.Add("Status", model.Status);
+            dic.Add("CreateUser", model.CreateUser);
+            dic.Add("CreateTime", DateTime.Now);
+            return DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery(sql.ToString(), dic);
+
+
+        }
+        /// <summary>
+        /// 修改appInfo
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public int Update(UC_AppInfo model)
+        {
+
+            Dictionary<string, object> dic = new Dictionary<string, object>();
+            StringBuilder sql = new StringBuilder();
+            sql.Append(@" Update UC_AppInfo set id=:Id,appname=:AppName,token=:Token,description=:Description,addressurl=:AddressURL,status=:Status,createuser=:CreateUser,createtime:CreateTime WHERE id=:Id");
+            dic.Add("Id", model.Id);
+            dic.Add("AppName", model.AppName);
+            dic.Add("Token", model.Token);
+            dic.Add("Description", model.Description);
+            dic.Add("AddressURL", model.AddressURL);
+            dic.Add("Status", model.Status);
+            dic.Add("CreateUser", model.CreateUser);
+            dic.Add("CreateTime", DateTime.Now);
+            return DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery(sql.ToString(), dic);
+
+
+        }
+        public int Delete(List<string> id)
+        {
+            var dic = new Dictionary<String, Object>()
+            {
+                { "Id", string.Join(",", id.ToArray())}
+
+            };
+            return DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery("delete UC_AppInfo where id in(:Id)", dic);
+        }
         #endregion
         /// <summary>
-        /// 查询该应用
+        /// 查询应用
         /// </summary>
         /// <param name="model"></param>
         /// <param name="orderType"></param>
@@ -78,85 +87,29 @@ namespace CM.AM.Service
         /// <param name="pageIndex"></param>
         /// <param name="recordCount"></param>
         /// <returns></returns>
-        public AjaxMsgResult Query(UC_AppInfo model, int orderType, int pageSize = 10, int pageIndex = 0, int recordCount = 0)
+        public IList<UC_AppInfo> Query(UC_AppInfo model, int count)
         {
-            result.Success = false;
-            try
-            {
-                Dictionary<string, object> dic = new Dictionary<string, object>();
-                List<string> fileds = new List<string>();
-                fileds.Add("*");
-                string orderColumnName = "CreateTime";
-                StringBuilder sublistSql = new StringBuilder();
-                sublistSql.Append(@" SELECT * FROM UC_AppInfo WHERE 1=1 ");
-                if (model.Id != null)
-                {
-                    sublistSql.Append(@" AND Id=?Id ");
-                    dic.Add("Id", model.Id);
-                }
-                if (model.Status != null)
-                {
-                    sublistSql.Append(@" AND Status LIKE ?Status ");
-                    dic.Add("Status", "%" + model.Status + "%");
-                }
-                if (model.AppName != null)
-                {
-                    sublistSql.Append(@" AND AppName LIKE ?AppName ");
-                    dic.Add("AppName", "%" + model.AppName + "%");
-                }
-                if (model.CreateUser != null)
-                {
-                    sublistSql.Append(@" AND IsValid=?IsValid ");
-                }
-                
-                RecordAsPageModel page = new RecordAsPageModel();
-                page.FldName = "";
-                page.OrderType = Convert.ToInt16(orderType);
-                page.PageIndex = pageIndex;
-                page.SortName = orderColumnName;
-                IList<UC_AppInfo> list = (MySqlHelper.ExecuteReader<UC_AppInfo>(sublistSql.ToString(), dic));
-            }
-            catch (Exception e)
-            {
-                result.Msg = e.ToString();
-            }
-            return result;
+
+            Dictionary<string, object> dic = new Dictionary<string, object>() {
+                { "count",count}
+            };
+            List<string> fileds = new List<string>();
+            return DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteReader<UC_AppInfo>("select * from UC_AppInfo order by createtime limit :count", dic);
+
         }
         /// <summary>
-        /// 验证
+        /// 获取该应用的信息
         /// </summary>
-        /// <param name="model"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public AjaxMsgResult Verify(UC_AppInfo model)
+        public UC_AppInfo Get(String id)
         {
-            result.Success = false;
-            try
+            var dic = new Dictionary<String, Object>()
             {
-                if (string.IsNullOrWhiteSpace(model.Token))
-                {
-                    result.State = AjaxMsgResult.StateEnum.VerifyFailed;
-                    return result;
-                }
-                Dictionary<string, object> dic = new Dictionary<string, object>();
-                StringBuilder sql = new StringBuilder();
-                sql.Append(@" select * from UC_User WHERE 1=1 AND Token=?Token ");
-                dic.Add("?Token",model.Token);
-                List<UC_AppInfo> data = MySqlHelper.ExecuteReader<UC_AppInfo>(sql.ToString(), dic);
-                if (data != null)
-                {
-                    if (data.Count > 0)
-                    {
-                        result.Success = true;
-                        result.Source = data;
-                    }
-                }
+                { "id", id }
+            };
+            return DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteReader<UC_AppInfo>("select * from UC_AppInfo where id=:id", dic)[0];
 
-            }
-            catch (Exception e)
-            {
-                result.Msg = e.ToString();
-            }
-            return result;
         }
     }
 }

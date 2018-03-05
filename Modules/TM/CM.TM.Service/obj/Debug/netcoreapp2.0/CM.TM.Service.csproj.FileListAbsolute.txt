@@ -1,0 +1,4 @@
+E:\项目\UAM\Modules\TM\CM.TM.Service\obj\Debug\netcoreapp2.0\CM.TM.Service.csprojResolveAssemblyReference.cache
+E:\项目\UAM\Modules\TM\CM.TM.Service\obj\Debug\netcoreapp2.0\CM.TM.Service.csproj.CoreCompileInputs.cache
+E:\项目\UAM\Modules\TM\CM.TM.Service\obj\Debug\netcoreapp2.0\CM.TM.Service.AssemblyInfoInputs.cache
+E:\项目\UAM\Modules\TM\CM.TM.Service\obj\Debug\netcoreapp2.0\CM.TM.Service.AssemblyInfo.cs

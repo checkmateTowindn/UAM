@@ -1,9 +1,8 @@
-﻿using System;
+﻿using CM.Common.Data;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using System.Linq;
-using CM.Common.MySQL;
 
 namespace CM.Common.JQuery
 {
@@ -120,7 +119,7 @@ namespace CM.Common.JQuery
 
                 if (!string.IsNullOrWhiteSpace(afterSql)) SQL_last.Append(afterSql);
 
-                DataSet ds = MySqlHelper.ExecuteDataSet(SQL_last.ToString(), CommandType.Text,DbParas);
+                DataSet ds = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteDataSet(SQL_last.ToString(), CommandType.Text,DbParas);
 
                 if (ph_paras.export || ph_paras.types == 2)
                 {//导出及treegrid
