@@ -5,12 +5,28 @@ namespace CM.UM.Model
     [Serializable]
     public class UC_Funs
     {
-        public string Id { get; set; }
-        public string MenuId { get; set; }
-        public string Funname { get; set; }
-        public string URL { get; set; }
-        public string Sort { get; set; }
-        public string Description { get; set; }
+        private string id;
+        private string menuid;
+        private string funname;
+        private string url;
+        private string sort;
+        private string description;
+        public UC_Funs() { }
+        public UC_Funs(string id, string menuid, string funname, string url, string sort, string description)
+        {
+            this.id = id;
+            this.menuid = menuid;
+            this.funname = funname;
+            this.url = url;
+            this.sort = sort;
+            this.description = description;
+        }
 
+        public string Id { get => id; set => id = value; }
+        public string MenuId { get => menuid; set => menuid = value; }
+        public string FunName { get => funname; set => funname = value; }
+        public string Url { get => url; set => url = value; }
+        public string Sort { get => sort; set => sort = value; }
+        public string Description { get => description; set => description = value; }
     }
 }

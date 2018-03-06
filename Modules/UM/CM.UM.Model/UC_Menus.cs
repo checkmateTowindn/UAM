@@ -7,14 +7,38 @@ namespace CM.UM.Model
     [Serializable]
     public class UC_Menus
     {
-        public string Id { get; set; }
-        public string MenuName { get; set; }
-        public string AppId { get; set; }
-        public string URL { get; set; }
-        public string ParentId { get; set; }
-        public string Icon { get; set; }
-        public int Sort { get; set; }
-        public int Level { get; set; }
-        public string Description { get; set; }
+        private string id;
+        private string menuname;
+        private string appid;
+        private string url;
+        private string parentid;
+        private string icon;
+        private string sort;
+        private string level;
+        private string description;
+        public UC_Menus()
+        { }
+        public UC_Menus(string id, string menuname, string appid, string url, string parentid, string icon, string sort, string level, string description)
+        {
+            this.id = id;
+            this.menuname = menuname;
+            this.appid = appid;
+            this.url = url;
+            this.parentid = parentid;
+            this.icon = icon;
+            this.sort = sort;
+            this.level = level;
+            this.description = description;
+        }
+
+        public string Id { get => id; set => id = value; }
+        public string MenuName { get => menuname; set => menuname = value; }
+        public string AppId { get => appid; set => appid = value; }
+        public string Url { get => url; set => url = value; }
+        public string ParentId { get => parentid; set => parentid = value; }
+        public string Icon { get => icon; set => icon = value; }
+        public string Sort { get => sort; set => sort = value; }
+        public string Level { get => level; set => level = value; }
+        public string Description { get => description; set => description = value; }
     }
 }

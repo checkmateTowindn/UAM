@@ -16,11 +16,11 @@ namespace CM.TM.Model
         }
         public UC_TeamApp(string id, string teamid, string appid, DateTime createtime, string createuser)
         {
-            this.id = id;
-            this.teamid = teamid;
-            this.appid = appid;
-            this.createtime = createtime;
-            this.createuser = createuser;
+            this.Id = id;
+            this.TeamId = teamid;
+            this.AppId = appid;
+            this.CreateTime = createtime;
+            this.CreateUser = createuser;
         }
 
         public string Id { get => id; set => id = value; }

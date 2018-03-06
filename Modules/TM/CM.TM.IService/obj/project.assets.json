@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\项目\\UAM\\Modules\\TM\\CM.TM.IService\\CM.TM.IService.csproj",
+      "projectUniqueName": "D:\\Project\\UAM\\Modules\\TM\\CM.TM.IService\\CM.TM.IService.csproj",
       "projectName": "CM.TM.IService",
-      "projectPath": "E:\\项目\\UAM\\Modules\\TM\\CM.TM.IService\\CM.TM.IService.csproj",
+      "projectPath": "D:\\Project\\UAM\\Modules\\TM\\CM.TM.IService\\CM.TM.IService.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\项目\\UAM\\Modules\\TM\\CM.TM.IService\\obj\\",
+      "outputPath": "D:\\Project\\UAM\\Modules\\TM\\CM.TM.IService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

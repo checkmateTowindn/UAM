@@ -7,8 +7,19 @@ namespace CM.UM.Model
     [Serializable]
     public class UC_RoleMenus
     {
-        public string Id { get; set; }
-        public string RoleId { get; set; }
-        public string MenuId { get; set; }
+        private string id;
+        private string roleid;
+        private string menuid;
+        public UC_RoleMenus() { }
+        public UC_RoleMenus(string id, string roleid, string menuid)
+        {
+            this.Id = id;
+            this.RoleId = roleid;
+            this.MenuId = menuid;
+        }
+
+        public string Id { get => id; set => id = value; }
+        public string RoleId { get => roleid; set => roleid = value; }
+        public string MenuId { get => menuid; set => menuid = value; }
     }
 }

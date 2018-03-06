@@ -16,14 +16,14 @@ namespace CM.TM.Model
         public UC_AppInfo() { } 
         public UC_AppInfo(string id, string appname, string token, string description, string addressurl, int status, string createuser, DateTime createtime)
         {
-            this.id = id;
-            this.appname = appname;
-            this.token = token;
-            this.description = description;
-            this.addressurl = addressurl;
-            this.status = status;
-            this.createuser = createuser;
-            this.createtime = createtime;
+            this.Id = id;
+            this.AppName = appname;
+            this.Token = token;
+            this.Description = description;
+            this.AddressURL = addressurl;
+            this.Status = status;
+            this.CreateUser = createuser;
+            this.CreateTime = createtime;
         }
 
         public string Id { get => id; set => id = value; }

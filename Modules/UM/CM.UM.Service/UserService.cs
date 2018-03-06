@@ -14,6 +14,7 @@ using CM.Common.Model;
 using CM.Common.JQuery;
 using Newtonsoft.Json;
 using CM.UM.Model.Ext;
+using CM.Common.Data;
 
 namespace CM.UM.Service
 {
@@ -58,7 +59,7 @@ namespace CM.UM.Service
                 dic.Add("Mobile", model.Mobile);
                 dic.Add("CreateUser", CreateUser==null? id:model.CreateUser);
                 dic.Add("CreateTime", DateTime.Now);
-                int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
+                int count = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery(sql.ToString(), dic);
                 if (count == 1)
                 {
                     if (userExtendService.Add(id).Success == true) {
@@ -123,7 +124,7 @@ namespace CM.UM.Service
                     }
                     dic.Add("Id" + i, ids[i]);
                 }
-                int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
+                int count = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery(sql.ToString(), dic);
                 if (count == ids.Count)
                 {
                     result.Success = true;
@@ -212,7 +213,7 @@ namespace CM.UM.Service
                     }
                     dic.Add("Id"+i,ids[i]);
                 }
-                int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
+                int count = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery(sql.ToString(), dic);
                 if (count == ids.Count)
                 {
                     result.Success = true;
@@ -291,7 +292,7 @@ namespace CM.UM.Service
                 page.OrderType= Convert.ToInt16(orderType);
                 page.PageIndex = pageIndex;
                 page.SortName = orderColumnName;
-                IList<UC_User> list = (MySqlHelper.ExecuteReader<UC_User>(sublistSql.ToString(),true,dic));
+                IList<UC_User> list = (DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteReader<UC_User>(sublistSql.ToString(),true,dic));
             }
             catch (Exception e)
             {
@@ -336,7 +337,7 @@ namespace CM.UM.Service
                 }
                 sql.Append(@" AND PassWord=?PassWord ");
                 dic.Add("PassWord", Com.SHA512Encrypt(model.PassWord));
-                List<UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), true, dic);
+                IList<UC_User> data = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteReader<UC_User>(sql.ToString(), true, dic);
                 if (data != null)
                 {
                     if (data.Count > 0)
@@ -391,7 +392,7 @@ namespace CM.UM.Service
                     dic.Add("Email", email);
                 }
                // List<UC_User> data = null;
-                List <UC_User> data = MySqlHelper.ExecuteReader<UC_User>(sql.ToString(), true, dic);
+                IList <UC_User> data = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteReader<UC_User>(sql.ToString(), true, dic);
                 
                 if (data!=null)
                 {
@@ -422,7 +423,7 @@ namespace CM.UM.Service
         {
             result.Success = false;
             string sql = " SELECT COUNT(*) FROM UC_User ";
-            return MySqlHelper.ExecuteSingle(sql);
+            return DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteSingle(sql);
         }
 
 

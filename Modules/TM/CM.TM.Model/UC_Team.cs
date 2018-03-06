@@ -24,16 +24,16 @@ namespace CM.TM.Model
         }
         public UC_Team(string id, string name, string description, string leader, DateTime createtime, string createuser, string sign, string logo,int projectcount, int status)
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.leader = leader;
-            this.createtime = createtime;
-            this.createuser = createuser;
-            this.sign = sign;
-            this.logo = logo;
-            this.projectcount = projectcount;
-            this.status = status;
+            this.Id = id;
+            this.Name = name;
+            this.Description = description;
+            this.Leader = leader;
+            this.CreateTime = createtime;
+            this.CreateUser = createuser;
+            this.Sign = sign;
+            this.Logo = logo;
+            this.ProjectCount = projectcount;
+            this.Status = status;
         }
 
         public string Id { get => id; set => id = value; }
