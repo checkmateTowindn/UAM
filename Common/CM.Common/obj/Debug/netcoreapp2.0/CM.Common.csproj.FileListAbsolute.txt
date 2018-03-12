@@ -40,3 +40,15 @@ D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb
 D:\GuideWeb\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
+D:\Project\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.deps.json
+D:\Project\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.dll
+D:\Project\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.pdb
+D:\Project\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\NLog.dll
+D:\Project\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Yunpian.dll
+D:\Project\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll
+D:\Project\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
+D:\Project\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csproj.CoreCompileInputs.cache
+D:\Project\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfoInputs.cache
+D:\Project\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
+D:\Project\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
+D:\Project\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb

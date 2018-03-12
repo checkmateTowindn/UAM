@@ -4743,6 +4743,9 @@
       "CM.TM.IService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.Common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CM.TM.IService.dll": {}
         },

@@ -1,5 +1,8 @@
 using CM.Common;
 using CM.Common.PostgreSQL;
+using CM.TM.IService;
+using CM.TM.Model;
+using CM.TM.Service;
 using CM.UM.IService;
 using CM.UM.Model;
 using CM.UM.Service;
@@ -20,6 +23,7 @@ namespace UnitTestProject
     {
         IUserService con = new UserService();
         IUserExtendService userExtendService = new UserExtendService();
+        ITeamService<UC_Team> teamService = new TeamService();
         AjaxMsgResult result = new AjaxMsgResult();
         [TestMethod]
         public void RedisTest()
@@ -91,7 +95,25 @@ namespace UnitTestProject
         {
             result = userExtendService.Add("YH04eb525ecb64426ea23e209fb7a5982c");
         }
-        
+        [TestMethod]
+        public void addTeam()
+        {
+            UC_Team model = new UC_Team()
+            {
+                Id = NewData.NewId("TM"),
+                Name = "Checkmate",
+                Description = "问鼎的第一个团队。",
+                Leader = "YH04eb525ecb64426ea23e209fb7a5982c",
+                CreateTime = DateTime.Now,
+                CreateUser = "YH04eb525ecb64426ea23e209fb7a5982c",
+                Sign="相信自己，坚持走下去！",
+                Logo="xxx.png",
+                ProjectCount=0,
+                Status=1
+            };
+            teamService.Add(model);
+        }
+
         public class Number
         {
             public string a1;

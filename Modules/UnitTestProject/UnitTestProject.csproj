@@ -15,6 +15,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\CM.Common\CM.Common.csproj" />
+    <ProjectReference Include="..\TM\CM.TM.IService\CM.TM.IService.csproj" />
+    <ProjectReference Include="..\TM\CM.TM.Model\CM.TM.Model.csproj" />
+    <ProjectReference Include="..\TM\CM.TM.Service\CM.TM.Service.csproj" />
     <ProjectReference Include="..\UM\CM.UM.IService\CM.UM.IService.csproj" />
     <ProjectReference Include="..\UM\CM.UM.Service\CM.UM.Service.csproj" />
   </ItemGroup>

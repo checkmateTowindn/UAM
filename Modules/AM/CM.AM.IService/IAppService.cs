@@ -8,10 +8,10 @@ namespace CM.TM.IService
 {
     public interface IAppService<App> where App : class
     {
-        int Add(App app);
-        int Delete(List<string> id);
-        int Update(App app);
-        IList<App> Query(App app, int count);
-        App Get(String id);
+        AjaxMsgResult Add(App app);
+        AjaxMsgResult Delete(List<string> id);
+        AjaxMsgResult Update(App app);
+        AjaxMsgResult Query(App app, int count);
+        AjaxMsgResult Get(String id);
     }
 }

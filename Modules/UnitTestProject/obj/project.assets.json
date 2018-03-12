@@ -5212,6 +5212,44 @@
           "bin/placeholder/CM.Common.dll": {}
         }
       },
+      "CM.TM.IService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CM.TM.IService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.TM.IService.dll": {}
+        }
+      },
+      "CM.TM.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/CM.TM.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.TM.Model.dll": {}
+        }
+      },
+      "CM.TM.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "CM.Common": "1.0.0",
+          "CM.TM.IService": "1.0.0",
+          "CM.TM.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CM.TM.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CM.TM.Service.dll": {}
+        }
+      },
       "CM.UM.IService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -13751,6 +13789,21 @@
       "path": "../../Common/CM.Common/CM.Common.csproj",
       "msbuildProject": "../../Common/CM.Common/CM.Common.csproj"
     },
+    "CM.TM.IService/1.0.0": {
+      "type": "project",
+      "path": "../TM/CM.TM.IService/CM.TM.IService.csproj",
+      "msbuildProject": "../TM/CM.TM.IService/CM.TM.IService.csproj"
+    },
+    "CM.TM.Model/1.0.0": {
+      "type": "project",
+      "path": "../TM/CM.TM.Model/CM.TM.Model.csproj",
+      "msbuildProject": "../TM/CM.TM.Model/CM.TM.Model.csproj"
+    },
+    "CM.TM.Service/1.0.0": {
+      "type": "project",
+      "path": "../TM/CM.TM.Service/CM.TM.Service.csproj",
+      "msbuildProject": "../TM/CM.TM.Service/CM.TM.Service.csproj"
+    },
     "CM.UM.IService/1.0.0": {
       "type": "project",
       "path": "../UM/CM.UM.IService/CM.UM.IService.csproj",
@@ -13770,6 +13823,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "CM.Common >= 1.0.0",
+      "CM.TM.IService >= 1.0.0",
+      "CM.TM.Model >= 1.0.0",
+      "CM.TM.Service >= 1.0.0",
       "CM.UM.IService >= 1.0.0",
       "CM.UM.Service >= 1.0.0",
       "MSTest.TestAdapter >= 1.1.18",
@@ -13815,11 +13871,20 @@
             "D:\\Project\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
               "projectPath": "D:\\Project\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
             },
+            "D:\\Project\\UAM\\Modules\\TM\\CM.TM.Service\\CM.TM.Service.csproj": {
+              "projectPath": "D:\\Project\\UAM\\Modules\\TM\\CM.TM.Service\\CM.TM.Service.csproj"
+            },
             "D:\\Project\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
               "projectPath": "D:\\Project\\UAM\\Common\\CM.Common\\CM.Common.csproj"
             },
+            "D:\\Project\\UAM\\Modules\\TM\\CM.TM.IService\\CM.TM.IService.csproj": {
+              "projectPath": "D:\\Project\\UAM\\Modules\\TM\\CM.TM.IService\\CM.TM.IService.csproj"
+            },
             "D:\\Project\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
               "projectPath": "D:\\Project\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
+            },
+            "D:\\Project\\UAM\\Modules\\TM\\CM.TM.Model\\CM.TM.Model.csproj": {
+              "projectPath": "D:\\Project\\UAM\\Modules\\TM\\CM.TM.Model\\CM.TM.Model.csproj"
             }
           }
         }

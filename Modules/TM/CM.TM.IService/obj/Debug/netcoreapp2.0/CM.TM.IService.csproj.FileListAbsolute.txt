@@ -6,3 +6,14 @@ E:\项目\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.A
 E:\项目\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.AssemblyInfo.cs
 E:\项目\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.dll
 E:\项目\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.pdb
+D:\Project\UAM\Modules\TM\CM.TM.IService\bin\Debug\netcoreapp2.0\CM.TM.IService.deps.json
+D:\Project\UAM\Modules\TM\CM.TM.IService\bin\Debug\netcoreapp2.0\CM.TM.IService.dll
+D:\Project\UAM\Modules\TM\CM.TM.IService\bin\Debug\netcoreapp2.0\CM.TM.IService.pdb
+D:\Project\UAM\Modules\TM\CM.TM.IService\bin\Debug\netcoreapp2.0\CM.Common.dll
+D:\Project\UAM\Modules\TM\CM.TM.IService\bin\Debug\netcoreapp2.0\CM.Common.pdb
+D:\Project\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.csprojResolveAssemblyReference.cache
+D:\Project\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.csproj.CoreCompileInputs.cache
+D:\Project\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.AssemblyInfoInputs.cache
+D:\Project\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.AssemblyInfo.cs
+D:\Project\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.dll
+D:\Project\UAM\Modules\TM\CM.TM.IService\obj\Debug\netcoreapp2.0\CM.TM.IService.pdb

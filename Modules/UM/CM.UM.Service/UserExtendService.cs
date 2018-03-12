@@ -1,4 +1,5 @@
 ﻿using CM.Common;
+using CM.Common.Data;
 using CM.Common.MySQL;
 using CM.UM.IService;
 using CM.UM.Model;
@@ -31,7 +32,7 @@ namespace CM.UM.Service
                 dic.Add("RealName", null);
                 dic.Add("AddRess", null);
                 dic.Add("UpdateTime", DateTime.Now);
-                int count = MySqlHelper.ExecuteNonQuery(sql.ToString(), dic);
+                int count = DataBaseFactory.GetDataBase(DataBaseType.main).ExecuteNonQuery(sql.ToString(), dic);
                 if (count == 1)
                 {
                     result.Success = true;

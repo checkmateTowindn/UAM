@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CM.Common;
+using System;
 using System.Collections.Generic;
 
 namespace CM.TM.IService
@@ -6,10 +7,10 @@ namespace CM.TM.IService
     public interface ITeamService<Team> where Team : class
     {
 
-        int Add(Team tm);
-        int Delete(List<string> id);
-        int Update(Team tm);
-        IList<Team> Query(Team tm,int count);
-        Team Get(String id);
+        AjaxMsgResult Add(Team tm);
+        AjaxMsgResult Delete(List<string> id);
+        AjaxMsgResult Update(Team tm);
+        AjaxMsgResult Query(Team tm,int count);
+        AjaxMsgResult Get(String id);
     }
 }
