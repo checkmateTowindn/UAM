@@ -34,3 +34,11 @@ D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.Assem
 D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.dll
 D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.pdb
 D:\GuideWeb\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\bin\Debug\netcoreapp2.0\CM.AM.Model.deps.json
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\bin\Debug\netcoreapp2.0\CM.AM.Model.dll
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\bin\Debug\netcoreapp2.0\CM.AM.Model.pdb
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.dll
+C:\Users\admin\Documents\GitHub\UAM\Modules\AM\CM.AM.Model\obj\Debug\netcoreapp2.0\CM.AM.Model.pdb

@@ -43,3 +43,11 @@ D:\Project\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.Assemb
 D:\Project\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.AssemblyInfo.cs
 D:\Project\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.dll
 D:\Project\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.pdb
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\bin\Debug\netcoreapp2.0\CM.UM.Model.deps.json
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\bin\Debug\netcoreapp2.0\CM.UM.Model.dll
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\bin\Debug\netcoreapp2.0\CM.UM.Model.pdb
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.dll
+C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.Model\obj\Debug\netcoreapp2.0\CM.UM.Model.pdb

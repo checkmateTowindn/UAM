@@ -21,8 +21,8 @@ namespace CM.UAM.WebAPI.Controllers
     public class IndexController : Controller
     {
         AjaxMsgResult result = new AjaxMsgResult();
-        IUserService service = new UserService();
         IAppService<UC_AppInfo> appService = new AppService();
+        IUserService service = new UserService();
         UC_User userModel = new UC_User();
         UC_AppInfo appInfoModel = new UC_AppInfo();
         [HttpPost]

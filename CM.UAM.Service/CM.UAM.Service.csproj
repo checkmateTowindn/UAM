@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>WinExe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Desktop\SSCore-master\SSCore\SSCore\SSCore.csproj" />
+    <ProjectReference Include="..\Modules\UM\CM.UM.IService\CM.UM.IService.csproj" />
+    <ProjectReference Include="..\Modules\UM\CM.UM.Service\CM.UM.Service.csproj" />
+  </ItemGroup>
+
+</Project>
