@@ -64,3 +64,15 @@ C:\Users\admin\Documents\GitHub\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.
 C:\Users\admin\Documents\GitHub\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
 C:\Users\admin\Documents\GitHub\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
 C:\Users\admin\Documents\GitHub\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb
+C:\Users\admin\Desktop\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.deps.json
+C:\Users\admin\Desktop\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.dll
+C:\Users\admin\Desktop\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\CM.Common.pdb
+C:\Users\admin\Desktop\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\NLog.dll
+C:\Users\admin\Desktop\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\Yunpian.dll
+C:\Users\admin\Desktop\UAM\Common\CM.Common\bin\Debug\netcoreapp2.0\YunpianInternationalSMSApi.dll
+C:\Users\admin\Desktop\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.AssemblyInfo.cs
+C:\Users\admin\Desktop\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.dll
+C:\Users\admin\Desktop\UAM\Common\CM.Common\obj\Debug\netcoreapp2.0\CM.Common.pdb

@@ -12,9 +12,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\SSCore-master\SSCore\SSCore\SSCore.csproj" />
     <ProjectReference Include="..\Modules\UM\CM.UM.IService\CM.UM.IService.csproj" />
     <ProjectReference Include="..\Modules\UM\CM.UM.Service\CM.UM.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SocketServer">
+      <HintPath>..\packages\SocketServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SSCore">
+      <HintPath>..\packages\SSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SSCore.Common">
+      <HintPath>..\packages\SSCore.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

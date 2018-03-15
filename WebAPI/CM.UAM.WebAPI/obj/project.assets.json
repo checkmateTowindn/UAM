@@ -13276,11 +13276,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
       "projectName": "CM.UAM.WebAPI",
-      "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
+      "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\WebAPI\\CM.UAM.WebAPI\\CM.UAM.WebAPI.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\WebAPI\\CM.UAM.WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\UAM\\WebAPI\\CM.UAM.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -13301,23 +13301,23 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\AM\\CM.AM.Service\\CM.AM.Service.csproj"
             },
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
             },
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\TM\\CM.TM.Model\\CM.TM.Model.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\TM\\CM.TM.Model\\CM.TM.Model.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\TM\\CM.TM.Model\\CM.TM.Model.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\TM\\CM.TM.Model\\CM.TM.Model.csproj"
             },
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
             },
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\AM\\CM.AM.IService\\CM.AM.IService.csproj"
             },
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Common\\CM.Common\\CM.Common.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Common\\CM.Common\\CM.Common.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Common\\CM.Common\\CM.Common.csproj"
             }
           }
         }

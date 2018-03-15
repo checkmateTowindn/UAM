@@ -76,3 +76,16 @@ C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcorea
 C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfo.cs
 C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.dll
 C:\Users\admin\Documents\GitHub\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.pdb
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.IService.deps.json
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.IService.dll
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.IService.pdb
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.Common.dll
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.Model.dll
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.Common.pdb
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\bin\Debug\netcoreapp2.0\CM.UM.Model.pdb
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.AssemblyInfo.cs
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.dll
+C:\Users\admin\Desktop\UAM\Modules\UM\CM.UM.IService\obj\Debug\netcoreapp2.0\CM.UM.IService.pdb

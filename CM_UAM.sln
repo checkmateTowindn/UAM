@@ -46,10 +46,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Socket", "Socket", "{EDA08F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.UAM.Service", "CM.UAM.Service\CM.UAM.Service.csproj", "{C8570B04-2C73-4AB2-AA7B-546792853237}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSCore", "SSCore\SSCore.csproj", "{C38F8C6D-26D7-439E-BE34-6BE1D56AD898}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSCore.Common", "SSCore.Common\SSCore.Common.csproj", "{04341339-7597-47CB-8070-623E446DF0E9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,14 +104,6 @@ Global
 		{C8570B04-2C73-4AB2-AA7B-546792853237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8570B04-2C73-4AB2-AA7B-546792853237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8570B04-2C73-4AB2-AA7B-546792853237}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C38F8C6D-26D7-439E-BE34-6BE1D56AD898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C38F8C6D-26D7-439E-BE34-6BE1D56AD898}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C38F8C6D-26D7-439E-BE34-6BE1D56AD898}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C38F8C6D-26D7-439E-BE34-6BE1D56AD898}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04341339-7597-47CB-8070-623E446DF0E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04341339-7597-47CB-8070-623E446DF0E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04341339-7597-47CB-8070-623E446DF0E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04341339-7597-47CB-8070-623E446DF0E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

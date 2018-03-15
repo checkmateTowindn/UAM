@@ -24,3 +24,12 @@ C:\Users\admin\Documents\GitHub\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2
 C:\Users\admin\Documents\GitHub\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.AssemblyInfo.cs
 C:\Users\admin\Documents\GitHub\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.dll
 C:\Users\admin\Documents\GitHub\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.pdb
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\bin\Debug\netcoreapp2.0\CM.TM.Model.deps.json
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\bin\Debug\netcoreapp2.0\CM.TM.Model.dll
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\bin\Debug\netcoreapp2.0\CM.TM.Model.pdb
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.AssemblyInfo.cs
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.dll
+C:\Users\admin\Desktop\UAM\Modules\TM\CM.TM.Model\obj\Debug\netcoreapp2.0\CM.TM.Model.pdb

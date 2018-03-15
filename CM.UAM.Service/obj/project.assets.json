@@ -4783,33 +4783,6 @@
         "runtime": {
           "bin/placeholder/CM.UM.Service.dll": {}
         }
-      },
-      "SSCore/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Newtonsoft.Json": "9.0.1",
-          "SSCore.Common": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SSCore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SSCore.dll": {}
-        }
-      },
-      "SSCore.Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "compile": {
-          "bin/placeholder/SSCore.Common.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SSCore.Common.dll": {}
-        }
       }
     }
   },
@@ -12618,16 +12591,6 @@
       "type": "project",
       "path": "../Modules/UM/CM.UM.Service/CM.UM.Service.csproj",
       "msbuildProject": "../Modules/UM/CM.UM.Service/CM.UM.Service.csproj"
-    },
-    "SSCore/1.0.0": {
-      "type": "project",
-      "path": "../../../../Desktop/SSCore-master/SSCore/SSCore/SSCore.csproj",
-      "msbuildProject": "../../../../Desktop/SSCore-master/SSCore/SSCore/SSCore.csproj"
-    },
-    "SSCore.Common/1.0.0": {
-      "type": "project",
-      "path": "../../../../Desktop/SSCore-master/SSCore/SSCore.Common/SSCore.Common.csproj",
-      "msbuildProject": "../../../../Desktop/SSCore-master/SSCore/SSCore.Common/SSCore.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12635,8 +12598,7 @@
       "CM.UM.IService >= 1.0.0",
       "CM.UM.Service >= 1.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Newtonsoft.Json >= 11.0.1",
-      "SSCore >= 1.0.0"
+      "Newtonsoft.Json >= 11.0.1"
     ]
   },
   "packageFolders": {
@@ -12650,11 +12612,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\CM.UAM.Service\\CM.UAM.Service.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\UAM\\CM.UAM.Service\\CM.UAM.Service.csproj",
       "projectName": "CM.UAM.Service",
-      "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\CM.UAM.Service\\CM.UAM.Service.csproj",
+      "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\CM.UAM.Service\\CM.UAM.Service.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\CM.UAM.Service\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\UAM\\CM.UAM.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -12675,14 +12637,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.IService\\CM.UM.IService.csproj"
             },
-            "C:\\Users\\admin\\Desktop\\SSCore-master\\SSCore\\SSCore\\SSCore.csproj": {
-              "projectPath": "C:\\Users\\admin\\Desktop\\SSCore-master\\SSCore\\SSCore\\SSCore.csproj"
-            },
-            "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
-              "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
+            "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\UAM\\Modules\\UM\\CM.UM.Service\\CM.UM.Service.csproj"
             }
           }
         }

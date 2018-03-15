@@ -11,7 +11,9 @@
           "CM.UM.IService": "1.0.0",
           "CM.UM.Service": "1.0.0",
           "Newtonsoft.Json": "11.0.1",
-          "SSCore": "1.0.0"
+          "SocketServer": "1.0.0.0",
+          "SSCore.Common": "1.0.0.0",
+          "SSCore": "1.0.0.0"
         },
         "runtime": {
           "CM.UAM.Service.dll": {}
@@ -3217,21 +3219,19 @@
           "CM.UM.Service.dll": {}
         }
       },
-      "SSCore/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "11.0.1",
-          "SSCore.Common": "1.0.0"
-        },
+      "SocketServer/1.0.0.0": {
         "runtime": {
-          "SSCore.dll": {}
+          "SocketServer.dll": {}
         }
       },
-      "SSCore.Common/1.0.0": {
-        "dependencies": {
-          "Newtonsoft.Json": "11.0.1"
-        },
+      "SSCore.Common/1.0.0.0": {
         "runtime": {
           "SSCore.Common.dll": {}
+        }
+      },
+      "SSCore/1.0.0.0": {
+        "runtime": {
+          "SSCore.dll": {}
         }
       }
     }
@@ -5271,13 +5271,18 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SSCore/1.0.0": {
-      "type": "project",
+    "SocketServer/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "SSCore.Common/1.0.0": {
-      "type": "project",
+    "SSCore.Common/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SSCore/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

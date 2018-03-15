@@ -11,27 +11,14 @@ namespace CM.UAM.Service
 {
     class Program
     {
-        private static Dictionary<String, IService> App = new Dictionary<string, string>();
         static void Main(string[] args)
         {
-            SocketServerBase server = new SocketServerBase();
-            server.NewClientAccepted += Server_NewClientAccepted;
-            server.Start();
-
-            Console.WriteLine("enter any key to exit.");
-            Console.ReadKey();
-        }
-
-        private static void Server_NewClientAccepted(Socket client, ISocketSession session)
-        {
-            Console.WriteLine("");
-            AsyncSocketSession ass = session as AsyncSocketSession;
-
-            ass.SetReceiveHandler(arg =>
+            SocketServer.Start();
+            SocketServer.SetCallBack(arg =>
             {
                 Console.WriteLine("");
                 string data = "没有找到";
-                string received = System.Text.Encoding.UTF8.GetString(arg.Buffer, arg.Offset, arg.BytesTransferred);
+                string received = arg;
                 int moduleNameLength = received.IndexOf('/');
                 String moduleName = String.Empty;
                 if (moduleNameLength == -1)
@@ -52,7 +39,7 @@ namespace CM.UAM.Service
                     data += "模块名为" + moduleName + "的模块";
                 }
 
-                ass.Send(data);
+                return data;
             });
         }
     }
