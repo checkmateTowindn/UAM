@@ -1,0 +1,10 @@
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\bin\Debug\netcoreapp2.0\config.json
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\bin\Debug\netcoreapp2.0\SSCore.Common.deps.json
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\bin\Debug\netcoreapp2.0\SSCore.Common.dll
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\bin\Debug\netcoreapp2.0\SSCore.Common.pdb
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\obj\Debug\netcoreapp2.0\SSCore.Common.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\obj\Debug\netcoreapp2.0\SSCore.Common.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\obj\Debug\netcoreapp2.0\SSCore.Common.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\obj\Debug\netcoreapp2.0\SSCore.Common.AssemblyInfo.cs
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\obj\Debug\netcoreapp2.0\SSCore.Common.dll
+C:\Users\admin\Desktop\SSCore-master\SSCore\SSCore.Common\obj\Debug\netcoreapp2.0\SSCore.Common.pdb
